@@ -1,45 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentries.github.io/fortran/404.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/CODE_OF_CONDUCT.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/LICENSE.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/index.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/instructor/404.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/instructor/LICENSE.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/instructor/index.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/instructor/introduction.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/instructor/profiles.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/instructor/reference.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/introduction.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/profiles.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/fortran/reference.html</loc>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/reference.html</loc>
   </url>
 </urlset>
