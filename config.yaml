@@ -11,13 +11,13 @@
 carpentry: 'incubator'
 
 # Overall title for pages.
-title: 'Lesson Title'
+title: 'Introduction to Modern Fortran'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2023-08-04'
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries'
+keywords: 'software, data, lesson, The Carpentries, Fortran'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
@@ -27,13 +27,14 @@ life_cycle: 'pre-alpha'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries/fortran'
+# source: 'https://github.com/carpentries/fortran'
+source: 'https://github.com/astroDimitrios/intro-to-modern-fortran'
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org'
+contact: 'd.theodorakis@metoffice.gov.uk'
 
 # Navigation ------------------------------------------------
 #

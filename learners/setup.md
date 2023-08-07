@@ -2,17 +2,10 @@
 title: Setup
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
-
 ## Data Sets
 
-<!--
-FIXME: place any data you want learners to use in `episodes/data` and then use
-       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
-       link to it, replacing the example.com link.
--->
-Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
+Download the [zip file](https://github.com/astroDimitrios/intro-to-modern-fortran) and unzip it to your Desktop or check out this [git repository]().
+This file contains data and skeleton code which we will use throughout the course.
 
 ## Software Setup
 
@@ -20,35 +13,34 @@ Download the [data zip file](https://example.com/FIXME) and unzip it to your Des
 
 ### Details
 
-Setup for different systems can be presented in dropdown menus via a `solution`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
+Before the start of the course please ensure that you have access to a Fortran compiler, and if necessary an account on *archer2*.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::: solution
 
-### Windows
+### archer2
 
-Use PuTTY
+For details of how to log into an archer2 account, see [archer2 quickstart guide link](https://docs.archer2.ac.uk/quick-start/quickstart-users/).
+
+The default Fortran compiler on archer2 is the Cray Fortran compiler invoked using `ftn`. For example,
+
+```shell
+$ cd section1.01
+$ ftn example1.f90
+```
+
+should generate an executable with the default name `a.out`.
 
 :::::::::::::::::::::::::
 
 :::::::::::::::: solution
 
-### MacOS
+### GFortran
 
-Use Terminal.app
-
-:::::::::::::::::::::::::
-
-
-:::::::::::::::: solution
-
-### Linux
-
-Use Terminal
+If you are not taking this course on archer2 we recommend installing the [GFortran][install-gfortran] compiler.
 
 :::::::::::::::::::::::::
+
+
 

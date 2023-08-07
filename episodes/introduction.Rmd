@@ -1,19 +1,12 @@
 ---
-title: 'introduction'
+title: 'Introduction'
 teaching: 10
-exercises: 2
+exercises: 10
 ---
-
-:::::::::::::::::::::::::::::::::::::: questions 
-
-- How do you write a lesson using R Markdown and `{sandpaper}`?
-
-::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Understand some of Fortrans colourful history
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
