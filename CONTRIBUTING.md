@@ -21,7 +21,7 @@ mistake, some awkward wording, or a factual error. This is a good way to
 introduce yourself and to meet some of our community members.
 
 1. If you do not have a [GitHub][github] account, you can [send us comments by
-   email][contact]. However, we will be able to respond more quickly if you use
+   email][mailto:d.theodorakis@metoffice.gov.uk]. However, we will be able to respond more quickly if you use
    one of the other methods described below.
 
 2. If you have a [GitHub][github] account, or are willing to [create
