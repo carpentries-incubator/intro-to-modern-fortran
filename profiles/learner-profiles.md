@@ -2,21 +2,25 @@
 title: Learner Profiles
 ---
 
-This page outlines example learner profiles. It is intended to highlight audiences for this Fortran course and provide example learning pathways into other courses. Instructors can use the profiles and pathways to decide which episodes to teach or place more emphasis on.
+This page outlines how [this course][this-course-link] links to other Fortran lessons. Use the learning pathways on this page to decide if the course is right for you.
 
-## Profiles
-
-Before teaching a workshop consider who is attending and their needs.
-
-***Tahani is a new research software engineer at the Met Office.*** She has just joined the office after their degree and have experience in Python, Linux, and shell commands. She has limited experience with compiled languages. The weather and climate code she will be working on is written in Fortran. She thought Fortran was a dead language.
-
-***Ionas, a researcher joining the JULES (Joint UK Land Environment Simulator) partnership.*** They will be adding new functionality to JULES in Fortran. They have extensive experience with C and C++ and have been told there are differences between Fortran and C/C++ that they should be aware of. They are keen to learn Fortran but must fit their learning inbetween teaching duties and other research commitments.
-
-***Malak is mathematics graduate student working on new timestepping methods.*** Malaks previous work was mostly theoretical although he knows basic Python. Malak needs to use Fortran to prototype his new routines which will interface with other Fortran code. Malak has been told by his supervisor that he should set up his preferred text editor for Fortran development.
-
-***Joe has been employed by a tech company to update their Fortran code.*** Joe has years of experience developing code but has not used Fortran in a production environment. They have been asked to update legacy code to modern standards, including implementing some form of testing and using standard libraries. Joe is not sure if there is a standard code style that they can adopt.
 
 ## Pathways
 
-This course is merely an introduction to modern Fortran.
-UNDER CONSTRUCTION
+This course is merely an introduction to modern Fortran, and most learners will also want to take the Intermediate Modern Fortran course. If you work on HPC code you may also find the ARCHER2 MPI and OpenMP courses linked below useful.
+
+```mermaid
+flowchart TD
+    accTitle: Learner Pathways for the Introduction to Modern Fortran Course
+    accDescr {This diagram shows the possible learning pathways after completing the Introduction to Modern Fortran course.
+    The Intermediate and Advanced Topics in Modern Fortran courses are in the pre-alpha stage.
+    The MPI and OpenMP courses are from ARCHER2, the UK's national supercomputing facility, courses.}
+    A["Introduction to Modern Fortran <br>(this course)"] --> B
+    B[Intermediate Modern Fortran] --> C & D & E
+    C[Advanced Topics<br>in Modern Fortran]
+    D[Message-passing<br>Programming with MPI]:::archer2
+    E[Shared Memory<br>Programming with OpenMP]:::archer2
+    classDef archer2 stroke:#64c2ab
+    click D href "https://www.archer2.ac.uk/training/courses/#message-passing-programming-with-mpi" "Link to the MPI Archer2 Course"
+    click E href "https://www.archer2.ac.uk/training/courses/#shared-memory-programming-with-openmp" "Link to the OpenMP Archer2 Course"
+```
