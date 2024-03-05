@@ -317,13 +317,13 @@
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">FORTRAN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">program</span> example1</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">! An example program prints "Hello World" to the screen</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span> <span class="kw">*</span> , <span class="st">"Hello World"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">end program</span> example1</span></code></pre>
+<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">program</span> example1</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="co">! An example program prints "Hello World" to the screen</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  <span class="fu">print</span> <span class="kw">*</span> , <span class="st">"Hello World"</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="kw">end program</span> example1</span></code></pre>
 </div>
 <p>Formally, a Fortran program consists of one or more lines made up of
 Fortran <em>statements</em>. Line breaks are significant (e.g., there
@@ -373,7 +373,7 @@ program will be (see <code>example2.f90</code>):</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">FORTRAN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre>
+<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">end</span></span></code></pre>
 </div>
 <p>If the <code>program-name</code> is present, it must be at both the
 beginning and the end, and must be the same in both places.</p>
@@ -387,7 +387,7 @@ of modules.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">FORTRAN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span> <span class="fu">format</span> <span class="kw">[</span> , output<span class="kw">-</span>item<span class="kw">-</span>list <span class="kw">]</span></span></code></pre>
+<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>  <span class="fu">print</span> <span class="fu">format</span> <span class="kw">[</span> , output<span class="kw">-</span>item<span class="kw">-</span>list <span class="kw">]</span></span></code></pre>
 </div>
 <p>where the <code>format</code> is a format specifier (discussed later)
 and the <code>output-item-list</code> is a comma-separated list of
@@ -402,13 +402,13 @@ item.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">FORTRAN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">program</span> example3</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">use</span> iso_fortran_env, <span class="kw">only</span> : output_unit</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write (</span>output_unit, <span class="fu">*)</span> <span class="st">"Hello "</span>, <span class="st">"world"</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">end program</span> example3</span></code></pre>
+<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">program</span> example3</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>  <span class="kw">use</span> iso_fortran_env, <span class="kw">only</span> : output_unit</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>  <span class="fu">write (</span>output_unit, <span class="fu">*)</span> <span class="st">"Hello "</span>, <span class="st">"world"</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="kw">end program</span> example3</span></code></pre>
 </div>
 <p>This example shows a more general way to provide some output. Here we
 are also going to employ the <code>use</code> statement to import a
@@ -422,7 +422,7 @@ output (cf. <code>stdout</code>).</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">FORTRAN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">use</span> <span class="kw">[[</span> , <span class="kw">module-</span>nature<span class="kw">]</span> <span class="dt">::</span><span class="kw">]</span> <span class="kw">module-</span>name <span class="kw">[</span> , <span class="kw">only</span> : <span class="kw">[only-</span>list<span class="kw">]]</span></span></code></pre>
+<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>  <span class="kw">use</span> <span class="kw">[[</span> , <span class="kw">module-</span>nature<span class="kw">]</span> <span class="dt">::</span><span class="kw">]</span> <span class="kw">module-</span>name <span class="kw">[</span> , <span class="kw">only</span> : <span class="kw">[only-</span>list<span class="kw">]]</span></span></code></pre>
 </div>
 <p>If <code>module-nature</code> is present, it must be either
 <code>intrinsic</code> or <code>non_intrinsic</code>. The implementation
@@ -440,7 +440,7 @@ the public symbols from <code>module-name</code> will be visible.</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">FORTRAN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write (</span>io<span class="kw">-</span>control<span class="kw">-</span>spec<span class="kw">-</span>list<span class="fu">)</span> <span class="kw">[</span>output<span class="kw">-</span>item<span class="kw">-</span>list<span class="kw">]</span></span></code></pre>
+<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>  <span class="fu">write (</span>io<span class="kw">-</span>control<span class="kw">-</span>spec<span class="kw">-</span>list<span class="fu">)</span> <span class="kw">[</span>output<span class="kw">-</span>item<span class="kw">-</span>list<span class="kw">]</span></span></code></pre>
 </div>
 <p>where the <code>output-item-list</code> is a comma separated list of
 items to be output. The <code>io-control-spec-list</code> has a large
@@ -449,7 +449,7 @@ output, these must include at least a unit number and a format:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">FORTRAN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write (</span><span class="kw">[</span><span class="fu">unit</span> <span class="kw">=</span> <span class="kw">]</span> io<span class="kw">-</span><span class="fu">unit</span>, <span class="kw">[</span><span class="fu">fmt</span> <span class="kw">=</span> <span class="kw">]</span> format<span class="fu">)</span> <span class="kw">[</span>output<span class="kw">-</span>item<span class="kw">-</span>list<span class="kw">]</span></span></code></pre>
+<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>  <span class="fu">write (</span><span class="kw">[</span><span class="fu">unit</span> <span class="kw">=</span> <span class="kw">]</span> io<span class="kw">-</span><span class="fu">unit</span>, <span class="kw">[</span><span class="fu">fmt</span> <span class="kw">=</span> <span class="kw">]</span> format<span class="fu">)</span> <span class="kw">[</span>output<span class="kw">-</span>item<span class="kw">-</span>list<span class="kw">]</span></span></code></pre>
 </div>
 <p>where the <code>io-unit</code> is a valid integer unit number, and
 the <code>format</code> is a format-specifier (as for
@@ -458,9 +458,9 @@ the <code>format</code> is a format-specifier (as for
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">FORTRAN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write (unit</span> <span class="kw">=</span> output_unit, <span class="fu">fmt</span> <span class="kw">=</span> <span class="fu">*)</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write (</span>output_unit, <span class="fu">*)</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write (*</span>, <span class="fu">*)</span></span></code></pre>
+<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>  <span class="fu">write (unit</span> <span class="kw">=</span> output_unit, <span class="fu">fmt</span> <span class="kw">=</span> <span class="fu">*)</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>  <span class="fu">write (</span>output_unit, <span class="fu">*)</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>  <span class="fu">write (*</span>, <span class="fu">*)</span></span></code></pre>
 </div>
 <p>C programmers looking for a new-line like symbol will notice that
 none has appeared so far. The default situation is that both
@@ -479,11 +479,11 @@ So you may see things such as</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">FORTRAN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">PROGRAM</span> example1</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">PRINT</span> <span class="kw">*</span>, <span class="st">"Hello World"</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">END PROGRAM</span> example1</span></code></pre>
+<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="kw">PROGRAM</span> example1</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>  <span class="fu">PRINT</span> <span class="kw">*</span>, <span class="st">"Hello World"</span></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="kw">END PROGRAM</span> example1</span></code></pre>
 </div>
 <p>As modern etiquette tends to regard capitals as shouting, this can
 cause some strain. In addition, as the compiler will accept mixed case,
@@ -601,7 +601,7 @@ any links that you are not going to use.
   "identifier": "https://astroDimitrios.github.io/intro-to-modern-fortran/introduction.html",
   "dateCreated": "2023-08-04",
   "dateModified": "2023-11-21",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>
