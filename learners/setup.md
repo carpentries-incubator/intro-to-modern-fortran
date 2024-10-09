@@ -42,5 +42,22 @@ If you are not taking this course on archer2 we recommend installing the [GFortr
 
 :::::::::::::::::::::::::
 
+## Text Editors and Integrated Development Environments (IDEs)
 
+While Fortran files are plain text can could be edited with any plain text editor, it is recommened that you use an editor that is capable of _syntax highlighting_. There are a number of these available.
+
+### Emacs
+
+[Emacs](https://www.gnu.org/software/emacs/) is a cross-platform text editor available for Linux, MacOS, and Windows. It will contain syntax highlighting for many Fortran file, but additional file extensions, such as `.X90`  may be valid Fortran files but will not be picked up in Emacs _fortran-mode_ or _f90-mode_. These modes allow for tab-completion of Fortran statements and the addition of an drop-down menu that provides additional Fortran-related options.
+
+Files can be manually set to fortran-mode or f90-mode using `M-x fortran-mode` or `M-x f90-mode`, but file extensions can be added to your Emacs configuration file to ensure that these are recognised when opened. The format for this is
+
+```lisp
+(setq auto-mode-alist
+      (append '(("\\.mf77$" . fortran-mode)
+                ("\\.mh$" . fortran-mode)
+                ("\\.X90" . f90-mode)
+                ("\\.mf90" . f90-mode)
+        ) auto-mode-alist))
+```
 

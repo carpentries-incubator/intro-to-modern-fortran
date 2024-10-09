@@ -11,6 +11,7 @@ any links that you are not going to use.
 [contact]: mailto:d.theodorakis@metoffice.gov.uk
 
 [epcc-link]: https://www.epcc.ed.ac.uk/
+[ncas-link]: https://ncas.ac.uk/
 [noc-link]: https://noc.ac.uk/
 [uk-met-link]: https://www.metoffice.gov.uk/
 
