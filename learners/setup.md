@@ -44,7 +44,7 @@ If you are not taking this course on archer2 we recommend installing the [GFortr
 
 ## Text Editors and Integrated Development Environments (IDEs)
 
-While Fortran files are plain text can could be edited with any plain text editor, it is recommened that you use an editor that is capable of _syntax highlighting_. There are a number of these available.
+While Fortran files are plain text and can be edited with any plain text editor, it is recommened that you use an editor that is capable of _syntax highlighting_. Setup instructions for some editors are available below.
 
 ### Emacs
 
