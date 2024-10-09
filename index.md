@@ -2,7 +2,7 @@
 site: sandpaper::sandpaper_site
 ---
 
-This is a new lesson built with [The Carpentries Workbench][workbench]. It is currently in pre-alpha development by the [Edinburgh Parallel Computing Centre][epcc-link], the [National Oceanography Centre][noc-link], and the [UK Met Office][uk-met-link].
+This is a new lesson built with [The Carpentries Workbench][workbench]. It is currently in pre-alpha development by the [Edinburgh Parallel Computing Centre][epcc-link], the [National Centre for Atmospheric Science][ncas-link], the [National Oceanography Centre][noc-link], and the [UK Met Office][uk-met-link].
 
 This course is aimed at users and developers who know how to program,
 but have little or no experience in Fortran, and those who may wish to
