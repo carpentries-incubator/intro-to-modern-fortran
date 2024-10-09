@@ -48,16 +48,27 @@ While Fortran files are plain text can could be edited with any plain text edito
 
 ### Emacs
 
-[Emacs](https://www.gnu.org/software/emacs/) is a cross-platform text editor available for Linux, MacOS, and Windows. It will contain syntax highlighting for many Fortran file, but additional file extensions, such as `.X90`  may be valid Fortran files but will not be picked up in Emacs _fortran-mode_ or _f90-mode_. These modes allow for tab-completion of Fortran statements and the addition of an drop-down menu that provides additional Fortran-related options.
+[Emacs][emacs-link] is a cross-platform text editor available for Linux, MacOS, and Windows. It will contain syntax highlighting for many Fortran file, but additional file extensions, such as `.X90`  may be valid Fortran files but will not be picked up in Emacs _f90-mode_. This mode allows for tab-completion of Fortran statements and the addition of a drop-down menu that provides additional Fortran-related options.
 
-Files can be manually set to fortran-mode or f90-mode using `M-x fortran-mode` or `M-x f90-mode`, but file extensions can be added to your Emacs configuration file to ensure that these are recognised when opened. The format for this is
-
+Files can be manually set to f90-mode using `M-x f90-mode`, but file extensions can be added to your [Emacs initialization file][emacs-init-link] to ensure that these are recognised when opened. The format for this is
 ```lisp
 (setq auto-mode-alist
-      (append '(("\\.mf77$" . fortran-mode)
-                ("\\.mh$" . fortran-mode)
+      (append '(("\\.mf90" . f90-mode)
                 ("\\.X90" . f90-mode)
-                ("\\.mf90" . f90-mode)
         ) auto-mode-alist))
 ```
+::::::::::::::::: tab
 
+### Windows/MacOS
+
+From your home directory, initialization settings can be placed within your `.emacs.d/init.el` file.
+
+### Linux
+
+Initialization settings can be placed within your `~/.config/emacs/init.el` file. This location follows the Linux desktop environment guidelines.
+
+### Legacy (cross platform)
+
+The `.emacs` or `.emacs.el` file is an older method of configuring Emacs. This file is held in your home directory.
+
+:::::::::::::::::::::::::
