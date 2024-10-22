@@ -269,9 +269,9 @@
 
 <p>This is a new lesson built with <a href="https://carpentries.github.io/sandpaper-docs" class="external-link">The Carpentries
 Workbench</a>. It is currently in pre-alpha development by the <a href="https://www.epcc.ed.ac.uk/" class="external-link">Edinburgh Parallel Computing
-Centre</a>, the <a href="https://noc.ac.uk/" class="external-link">National Oceanography
-Centre</a>, and the <a href="https://www.metoffice.gov.uk/" class="external-link">UK Met
-Office</a>.</p>
+Centre</a>, the <a href="https://ncas.ac.uk/" class="external-link">National Centre for
+Atmospheric Science</a>, the <a href="https://noc.ac.uk/" class="external-link">National
+Oceanography Centre</a>, and the <a href="https://www.metoffice.gov.uk/" class="external-link">UK Met Office</a>.</p>
 <p>This course is aimed at users and developers who know how to program,
 but have little or no experience in Fortran, and those who may wish to
 have a refresher in Fortran.</p>
@@ -375,7 +375,7 @@ a Fortran compiler, and if necessary an account on <em>archer2</em>.</p>
   archer2
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>For details of how to log into an archer2 account, see <a href="https://docs.archer2.ac.uk/quick-start/quickstart-users/" class="external-link">archer2
 quickstart guide link</a>.</p>
@@ -396,7 +396,7 @@ $ ftn example1.f90</code></pre>
   GFortran
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>If you are not taking this course on archer2 we recommend installing
 the <a href="https://fortran-lang.org/learn/os_setup/install_gfortran/" class="external-link">GFortran</a>
@@ -405,10 +405,72 @@ compiler.</p>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="text-editors-and-integrated-development-environments-ides">Text Editors and Integrated Development Environments (IDEs)<a class="anchor" aria-label="anchor" href="#text-editors-and-integrated-development-environments-ides"></a></h2>
+<hr class="half-width"><p>While Fortran files are plain text and can be edited with any plain
+text editor, it is recommened that you use an editor that is capable of
+<em>syntax highlighting</em>. Setup instructions for some editors are
+available below.</p>
+<div class="section level3">
+<h3 id="emacs">Emacs<a class="anchor" aria-label="anchor" href="#emacs"></a></h3>
+<p><a href="https://www.gnu.org/software/emacs/" class="external-link">Emacs</a> is a
+cross-platform text editor available for Linux, MacOS, and Windows.
+Emacs applies syntax highlighting for most Fortran files, but additional
+file extensions, such as <code>.X90</code> may be valid Fortran files
+but will not be picked up in Emacs <em>f90-mode</em>. This mode allows
+for tab-completion of Fortran statements and the addition of a drop-down
+menu that provides additional Fortran-related options.</p>
+<p>Files can be manually set to f90-mode using
+<code>M-x f90-mode</code>, but file extensions can be added to your <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html" class="external-link">Emacs
+initialization file</a> to ensure that these are recognised when opened.
+The format for this is</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LISP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode lisp" tabindex="0"><code class="sourceCode commonlisp"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>(<span class="kw">setq</span> auto-mode-alist</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>      (<span class="kw">append</span> '((<span class="st">"</span><span class="sc">\\</span><span class="st">.mf90"</span> . f90-mode)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>                (<span class="st">"</span><span class="sc">\\</span><span class="st">.X90"</span> . f90-mode)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>        ) auto-mode-alist))</span></code></pre>
+</div>
+<div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-1">
+  Windows/MacOS
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-2">
+  Linux
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-3" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-3" type="button" role="tab" aria-controls="nav-tabpanel-1-3" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-3">
+  Legacy (cross platform)
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
+<p>From your home directory, initialization settings can be placed
+within your <code>.emacs.d/init.el</code> file.</p>
+</div>
+<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
+<p>Initialization settings can be placed within your
+<code>~/.config/emacs/init.el</code> file. This location follows the
+Linux desktop environment guidelines.</p>
+</div>
+<div id="nav-tabpanel-1-3" class="tab-pane" aria-labelledby="nav-tab-1-3" role="tabpanel">
+<p>The <code>.emacs</code> or <code>.emacs.el</code> file is an older
+method of configuring Emacs. This file is held in your home
+directory.</p>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="../instructor/introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -458,8 +520,8 @@ any links that you are not going to use.
   "url": "https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/index.html",
   "identifier": "https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/index.html",
   "dateCreated": "2023-08-04",
-  "dateModified": "2024-10-08",
-  "datePublished": "2024-10-08"
+  "dateModified": "2024-10-22",
+  "datePublished": "2024-10-22"
 }
 
   </script><script>
