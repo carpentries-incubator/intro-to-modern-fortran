@@ -61,6 +61,7 @@ contact: 'd.theodorakis@metoffice.gov.uk'
 # Order of episodes in your lesson
 episodes: 
 - introduction.Rmd
+- 02-basics.Rmd
 
 # Information for Learners
 learners: 
