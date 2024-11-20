@@ -55,7 +55,7 @@ and functions, as well as names for variables.
 
 ### The `implicit` statement
 
-By default, variables in fortran do not need to be declared a specific type, they 
+By default, variables in Fortran do not need to be declared a specific type, they 
 can just be used within the code. Variables with names beginning with letters `i-n` are implicitly
 of type `integer`, while anything else is of type `real` (unless explicitly declared otherwise).
 
