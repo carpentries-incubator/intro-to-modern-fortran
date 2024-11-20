@@ -287,7 +287,7 @@ variable `string1`.
 
 ## Working with strings
 
-Using the above `example5`, concatinate `string2` and `string3` into a new variable `string4`, 
+Using the above `example5`, concatenate `string2` and `string3` into a new variable `string4`, 
 and print out the values of all strings. Also, print the third character of `string4`.
 
 :::::::::::::::: solution
