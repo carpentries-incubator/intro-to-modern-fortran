@@ -123,14 +123,27 @@ $ ./a.out
    2.00000000    
    7.00000000   
 ```
-However, you can also define constant values that do not change by defining variables using `parameter`, e.g.
+However, you can also define constant values that cannot change by defining variables using `parameter`.
+We are then unable to modify `parameter` variables, e.g.
 ```fortran
 program example3
    implicit none
 
    real, parameter :: pi = 3.14159265
 
+   pi = pi + 2.0
+
+   print *, pi
+
 end program example3
+```
+When compiling this program, this will give an error similar to the following from the `gfortran` compiler:
+```
+example3.f90:6:3:
+
+    6 |    pi = pi + 2.0
+      |   1
+Error: Named constant 'pi' in variable definition context (assignment) at (1)
 ```
 
 ::::::::::::::::::::::::::::::::::::: challenge
