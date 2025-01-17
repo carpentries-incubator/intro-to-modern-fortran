@@ -4,18 +4,73 @@ title: Setup
 
 ## Data Sets
 
-Download the [zip file](https://github.com/astroDimitrios/intro-to-modern-fortran) and unzip it to your Desktop or check out this [git repository]().
+Download the [zip file](https://github.com/astroDimitrios/intro-to-modern-fortran)
+and unzip it to your Desktop or check out this [git repository]().
 This file contains data and skeleton code which we will use throughout the course.
 
-## Software Setup
+## Compiler Setup
 
-::::::::::::::::::::::::::::::::::::::: discussion
+Fortran is a compiled language.
+This means you have to translate your Fortran code to machine code
+before running the program.
+We can do this with a Fortran compiler.
+It is common to test your code with multiple compilers,
+as some are better at debugging certain errors than others.
 
-### Details
+Your instructor may provide different instructions for installing
+a suitable compiler or have installed one for you.
+If you need to install a compiler yourself follow the instructions below.
+We recommend installing **GFortran**[1] as your first compiler.
 
-Before the start of the course please ensure that you have access to a Fortran compiler, and if necessary an account on *archer2*.
+::: group-tab
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::
+## GFortran
+
+GFortran is a free open source compiler.
+Comprehensive install instructions can be found on the
+[GFortran install page on fortran-lang][install-gfortran].
+
+You can also install GFortran via conda:
+
+```bash
+conda install gfortran 
+```
+
+## Intel
+
+The Intel Fortran compiler is free through their oneAPI toolkit.
+
+- [Linux Install Instructions](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2025-0/intel-fortran-essentials.html#GUID-E8EA92E5-84BC-4550-9988-4A9147A1B769)
+- [Windows Install Instructions](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-windows/2025-0/intel-fortran-essentials.html)
+
+Note: The Intel compiler is not available for MacOS.
+
+You can also install the Intel compiler via conda:
+
+```bash
+conda install intel-fortran-rt
+```
+
+### Flang
+
+LLVM Flang is another open source compiler
+based on the LLVM compiler toolkit.
+Building Flang is more involved than the GFortran or Intel compilers.
+[Link to the Flang Getting Started page](https://flang.llvm.org/docs/GettingStarted.html)
+
+You can also install the Flang compiler via conda:
+
+```bash
+conda install flang
+```
+
+### Cray
+
+The [HPE/Cray Fortran compiler](https://cpe.ext.hpe.com/docs/latest/cce/index.html)
+is proprietary but highly optimised.
+Your organisation may have a license for the Cray compiler.
+
+:::
 
 :::::::::::::::: solution
 
@@ -72,3 +127,7 @@ Initialization settings can be placed within your `~/.config/emacs/init.el` file
 The `.emacs` or `.emacs.el` file is an older method of configuring Emacs. This file is held in your home directory.
 
 :::::::::::::::::::::::::
+
+
+[1] GFortran is freely available as part of the Gnu Compiler Collection (GCC).
+    See the [GFortran install page on fortran-lang][install-gfortran]
