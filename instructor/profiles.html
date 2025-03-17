@@ -257,14 +257,32 @@
         <h1>Learner Profiles</h1>
         
 
-<p>This is a placeholder file. Please add content here.</p>
+<p>This page outlines how <a href="https://carpentries-incubator.github.io/intro-to-modern-fortran/" class="external-link">this
+course</a> links to other Fortran lessons. Use the learning pathways on
+this page to decide if the course is right for you.</p>
+<section><h2 class="section-heading" id="pathways">Pathways<a class="anchor" aria-label="anchor" href="#pathways"></a></h2>
+<hr class="half-width"><p>This course is merely an introduction to modern Fortran, and most
+learners will also want to take the Intermediate Modern Fortran course.
+If you work on HPC code you may also find the ARCHER2 MPI and OpenMP
+courses linked below useful.</p>
+<pre class="mermaid"><code>flowchart TD
+    accTitle: Learner Pathways for the Introduction to Modern Fortran Course
+    accDescr {This diagram shows the possible learning pathways after completing the Introduction to Modern Fortran course.
+    The Intermediate and Advanced Topics in Modern Fortran courses are in the pre-alpha stage.
+    The MPI and OpenMP courses are from ARCHER2, the UK's national supercomputing facility, courses.}
+    A["Introduction to Modern Fortran &lt;br&gt;(this course)"] --&gt; B
+    B[Intermediate Modern Fortran] --&gt; C &amp; D &amp; E
+    C[Advanced Topics&lt;br&gt;in Modern Fortran]
+    D[Message-passing&lt;br&gt;Programming with MPI]:::archer2
+    E[Shared Memory&lt;br&gt;Programming with OpenMP]:::archer2
+    classDef archer2 stroke:#64c2ab
+    click D href "https://www.archer2.ac.uk/training/courses/#message-passing-programming-with-mpi" "Link to the MPI Archer2 Course"
+    click E href "https://www.archer2.ac.uk/training/courses/#shared-memory-programming-with-openmp" "Link to the OpenMP Archer2 Course"</code></pre>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-
-
-      </div>
+</section></div>
     </main></div>
 <!-- END  : inst/pkgdown/templates/content-extra.html -->
 
