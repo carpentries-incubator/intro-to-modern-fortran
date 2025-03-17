@@ -5,17 +5,23 @@ title: Setup
 ## Data Sets
 
 Download the [zip file](https://github.com/astroDimitrios/intro-to-modern-fortran)
-and unzip it to your Desktop or check out this [git repository]().
-This file contains data and skeleton code which we will use throughout the course.
+and unzip it in your Desktop **or** check out this lessons
+[git repository](https://github.com/carpentries-incubator/intro-to-modern-fortran/) and navigate to the following directory:
+`episodes/data/learners`.
+This contains data and skeleton code which we will use throughout the course.
+This course refers to this `learners` directory
+as the **data directory** from this point on.
 
 ## Compiler Setup
 
 Fortran is a compiled language.
-This means you have to translate your Fortran code to machine code
+You have to translate your Fortran code to machine code
 before running the program.
 We can do this with a Fortran compiler.
 It is common to test your code with multiple compilers,
 as some are better at debugging certain errors than others.
+
+### Installing a Compiler
 
 Your instructor may provide different instructions for installing
 a suitable compiler or have installed one for you.
@@ -27,13 +33,13 @@ We recommend installing **GFortran**[1] as your first compiler.
 ## GFortran
 
 GFortran is a free open source compiler.
-Comprehensive install instructions can be found on the
+Comprehensive installation instructions are on the
 [GFortran install page on fortran-lang][install-gfortran].
 
 You can also install GFortran via conda:
 
 ```bash
-conda install gfortran 
+$ conda install gfortran 
 ```
 
 ## Intel
@@ -48,54 +54,112 @@ Note: The Intel compiler is not available for MacOS.
 You can also install the Intel compiler via conda:
 
 ```bash
-conda install intel-fortran-rt
+$ conda install intel-fortran-rt
 ```
 
 ### Flang
 
 LLVM Flang is another open source compiler
 based on the LLVM compiler toolkit.
-Building Flang is more involved than the GFortran or Intel compilers.
+Flang is installed from the LLVM source code.
+If you have not built programs from source before
+we recommended choosing another compiler
+or installing Flang via conda.
 [Link to the Flang Getting Started page](https://flang.llvm.org/docs/GettingStarted.html)
 
 You can also install the Flang compiler via conda:
 
 ```bash
-conda install flang
+$ conda install flang
 ```
 
 ### Cray
 
-The [HPE/Cray Fortran compiler](https://cpe.ext.hpe.com/docs/latest/cce/index.html)
+The [HPE Cray Fortran compiler](https://cpe.ext.hpe.com/docs/latest/cce/index.html)
 is proprietary but highly optimised.
 Your organisation may have a license for the Cray compiler.
 
 :::
 
-:::::::::::::::: solution
+### Testing your compiler
 
-### archer2
+Now you have a compiler installed you can compile a simple program.
+In the [data directory](./setup.md#data-sets)
+navigate to `setup/hello_world.f90`.
+This is a Fortran program which contains:
 
-For details of how to log into an archer2 account, see [archer2 quickstart guide link](https://docs.archer2.ac.uk/quick-start/quickstart-users/).
+```fortran
+program hello_world
 
-The default Fortran compiler on archer2 is the Cray Fortran compiler invoked using `ftn`. For example,
+    implicit none
 
-```shell
-$ cd section1.01
-$ ftn example1.f90
+    print *, 'Hello World!'
+
+end program
+
 ```
 
-should generate an executable with the default name `a.out`.
+Open a terminal.
+Enter the setup directory:
 
-:::::::::::::::::::::::::
+```bash
+$ cd <path-to-your-data-directory>/setup
+```
 
-:::::::::::::::: solution
+To compile the program run:
 
-### GFortran
+::: group-tab
 
-If you are not taking this course on archer2 we recommend installing the [GFortran][install-gfortran] compiler.
+## GFortran
 
-:::::::::::::::::::::::::
+```bash
+$ gfortran hello_world.f90
+```
+
+## Intel
+
+```bash
+$ ifx hello_world.f90
+```
+
+### Flang
+
+```bash
+$ flang hello_world.f90
+```
+
+### Cray
+
+```bash
+$ ftn hello_world.f90
+```
+
+:::
+
+You should see a new file in the directory:
+
+```bash
+$ ls
+```
+
+```output
+a.out hello_world.f90
+```
+
+The `a.out` file is your compiled program.
+To run the program:
+
+```bash
+$ ./a.out
+```
+
+```output
+Hello World!
+```
+
+You have compiled your first Fortran program!
+The first episode in this lesson will
+cover compiling in more detail.
 
 ## Text Editors and Integrated Development Environments (IDEs)
 
