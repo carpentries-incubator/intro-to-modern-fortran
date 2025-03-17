@@ -55,8 +55,8 @@ as the **data directory** from this point on.
 Fortran is a compiled language.
 You have to translate your Fortran code to machine code
 before running the program.
-We can do this with a Fortran compiler.
-It is common to test your code with multiple compilers,
+We do this with a Fortran compiler.
+You should test your code with multiple compilers,
 as some are better at debugging certain errors than others.
 
 ### Installing a Compiler
