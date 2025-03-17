@@ -42,7 +42,7 @@ The follow on lesson **Object Orientated Fortran**
 
 ## Data Sets
 
-Download the [tar file](../exercises.tar.gz)
+Download the [tar file](../episodes/data/exercises.tar.gz)
 and extract the contents in your Desktop.
 This file contains template code and data for some exercises.
 It also contains solutions for all exercises.
