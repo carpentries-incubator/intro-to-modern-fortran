@@ -73,7 +73,7 @@ The `.emacs` or `.emacs.el` file is an older method of configuring Emacs. This f
 
 :::::::::::::::::::::::::
 
-### VScode
+### VS Code
 
 [Visual Studio Code (VS Code)][vscode-link] is a powerful IDE available for Linux, macOS, and Windows. To bring the power of VS Code to bear on Fortran, two additions are required. The [Modern Fortran extension](vscode-modern-fortran) enhances Fortran support in VS Code, offering features such as syntax highlighting, IntelliSense for Fortran statements, and debugging capabilities, along with customization options to improve the coding experience for Fortran developers. The Modern Fortran extension depends on `fortls`: a language server that interfaces with the code editor.
 
