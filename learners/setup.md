@@ -75,11 +75,11 @@ The `.emacs` or `.emacs.el` file is an older method of configuring Emacs. This f
 
 ### VScode
 
-[VScode][vscode-link] Visual Studio Code (VSCode) is a powerful IDE available for Linux, macOS, and Windows. To bring the power of VScode to bear on Fortran, two additions are required. The [Modern Fortran extension](vscode-modern-fortran) enhances Fortran support in VSCode, offering features such as syntax highlighting, IntelliSense for Fortran statements, and debugging capabilities, along with customization options to improve the coding experience for Fortran developers. The Modern Fortran extension depends on `fortls`: a language server that interfaces with the code editor.
+[Visual Studio Code (VS Code)][vscode-link] is a powerful IDE available for Linux, macOS, and Windows. To bring the power of VS Code to bear on Fortran, two additions are required. The [Modern Fortran extension](vscode-modern-fortran) enhances Fortran support in VS Code, offering features such as syntax highlighting, IntelliSense for Fortran statements, and debugging capabilities, along with customization options to improve the coding experience for Fortran developers. The Modern Fortran extension depends on `fortls`: a language server that interfaces with the code editor.
 
 ::::::::::::::::: tab
 
-### Pypi
+### PyPI
 
 ```bash
 pip install fortls
@@ -99,7 +99,7 @@ brew install fortls
 
 ### Source
 
-The development version of fortls can be installed from github via
+The development version of `fortls` can be installed from GitHub via
 
 ```bash
 pip install --user --upgrade git+git://github.com/fortran-lang/fortls
@@ -107,13 +107,13 @@ pip install --user --upgrade git+git://github.com/fortran-lang/fortls
 
 :::::::::::::::::::::::::
 
-Once fortls is installed, install the [Modern Fortran extension](vscode-modern-fortran), and it should work out of the box.
+Once `fortls` is installed, install the [Modern Fortran extension](vscode-modern-fortran), and it should work out of the box.
 
 #### Adding a ruler
 
 We recommend adding a ruler: essentially a vertical line in the editor which gives you a visual guide as to the number of characters you should include on a single line of code. 
 
-To add a ruler at 80 characters to your VScode editor window, in VScode
+To add a ruler at 80 characters to your VS Code editor window, in VS Code
 
 1. Open the Command Palette (Press `Cmd+Shift+P`, or `Ctrl+Shift+P`)
 2. Type 'settings' and then select the option which says "Preferences: Open User Settings (JSON)"
