@@ -29,6 +29,18 @@ More recent standards of Fortran come under the umbrella term "Modern Fortran".
 These are the Fortran 95 standard,
 and more recent standards.[^fortran-standards]
 
+::::::::::::::::::::::::::::::::::::: prereq
+
+### Prerequisites
+
+Learners *should* be familiar with the basic concepts of
+programming: variables, logic, control flow, loops, functions and
+so on.
+No knowledge of Fortran is assumed.
+No previous experience with compiled languages is required.
+
+::::::::::::::::::::::::::::::::::::::::::::
+
 ## Learning Outcomes
 
 This course provides an introduction to writing Modern Fortran.
@@ -65,18 +77,6 @@ is not used often in modern code.
 
 The follow on lesson **Object Orientated Fortran**
 (coming soon) contains further advanced topics.
-
-::::::::::::::::::::::::::::::::::::: prereq
-
-### Prerequisites
-
-Learners *should* be familiar with the basic concepts of
-programming: variables, logic, control flow, loops, functions and
-so on.
-No knowledge of Fortran is assumed.
-No previous experience with compiled languages is required.
-
-::::::::::::::::::::::::::::::::::::::::::::
 
 [workbench]: https://carpentries.github.io/sandpaper-docs
 [archer2]: ARCHER2 is one of the UKs national supercomputing facilities.
