@@ -42,13 +42,33 @@ The follow on lesson **Object Orientated Fortran**
 
 ## Data Sets
 
-Download the [zip file](https://github.com/astroDimitrios/intro-to-modern-fortran)
-and unzip it in your Desktop **or** check out this lessons
-[git repository](https://github.com/carpentries-incubator/intro-to-modern-fortran/) and navigate to the following directory:
-`episodes/data/learners`.
-This contains data and skeleton code which we will use throughout the course.
-This course refers to this `learners` directory
-as the **data directory** from this point on.
+Download the [tar file](../exercises.tar.gz)
+and extract the contents in your Desktop.
+This file contains template code and data for some exercises.
+It also contains solutions for all exercises.
+
+```bash
+$ mkdir ~/Desktop/intro-to-modern-fortran
+$ cd ~/Desktop/intro-to-modern-fortran
+$ tar -xzf ~/Downloads/exercises.tar.gz --strip-components=1
+```
+
+::: spoiler
+
+### Alternative Download Method
+
+If the tar file download fails the exercises and data sets
+are in this lessons GitHub repository:
+
+```bash
+$ cd ~/Desktop
+$ git clone git@github.com:carpentries-incubator/intro-to-modern-fortran.git
+```
+
+The [tar file](https://github.com/carpentries-incubator/intro-to-modern-fortran/blob/main/exercises.tar.gz) is in the root directory.
+Alternatively the exercises are in the top level `exercises/` directory.
+
+:::
 
 ## Compiler Setup
 
@@ -123,9 +143,9 @@ Your organisation may have a license for the Cray compiler.
 ### Testing your compiler
 
 Now you have a compiler installed you can compile a simple program.
-In the [data directory](./setup.md#data-sets)
-navigate to `setup/hello_world.f90`.
-This is a Fortran program which contains:
+The [exercise and data file](./setup.md#data-sets)
+you downloaded contains `setup/hello_world.f90`.
+This is a simple Fortran program:
 
 ```fortran
 program hello_world
@@ -138,11 +158,15 @@ end program
 
 ```
 
-Open a terminal.
 Enter the setup directory:
 
 ```bash
-$ cd <path-to-your-data-directory>/setup
+$ cd setup
+$ ls
+```
+
+```output
+hello_world.f90
 ```
 
 To compile the program run:
