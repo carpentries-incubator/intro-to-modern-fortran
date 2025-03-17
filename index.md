@@ -20,53 +20,65 @@ modern Fortran is fast, supports object orientated programming
 and is easy to read.
 
 Fortran is often used to write code for High Performance Computing (HPC).
-At ARCHER2, one of the UKs national supercomputing facilities, some of
-the top research codes are written in Fortran.[^archer2-codes]
-Fortran retains extensive usage in many areas of scientific
-and numerical computing,
-particularly for applications such as quantum chemistry, plasmas, and in
-numerical weather prediction and climate models.
+Many of the research codes run on ARCHER2[^archer2]
+are Fortran programs.[^archer2-codes]
+Various areas of Science are covered by these Fortran programs.
+For example quantum chemistry, plasmas, and numerical weather prediction.
 
-More recent standards of Fortran (the latest being Fortran 2023) come
-under the umbrella term "Modern Fortran".
-This course provides an introduction to the basics of writing Modern Fortran.
-It will cover everything from basic syntax, variables,
-expressions and assignments,
-to functions, arrays, and modules.
-Common Fortran idioms will be introduced and contrasted with those
-available in C-like languages.
+More recent standards of Fortran come under the umbrella term "Modern Fortran".
+These are the Fortran 95 standard,
+and more recent standards.[^fortran-standards]
 
-At the end of the course you should be able to understand many Fortran
-programs and be confident writing well-structured and portable Fortran.
-Fortran is a rather "large" language, so it is not possible to
-cover all its features in this course.
-Further elements of Fortran are discussed in the
-"Object Orientated Fortran" course (coming soon).
+## Learning Outcomes
+
+This course provides an introduction to writing Modern Fortran.
+It covers everything from basic syntax and variables.
+To functions, arrays, and modules.
+Common Fortran idioms are introduced and compared to C++.
+
+Within the first hour you will have:
+
+- written a hello world program
+- compiled your first program
+- done basics maths in a program
+
+At the end of the course you should be able to:
+
+- understand many Fortran programs
+- write well-structured Fortran
+- write portable Fortran modules
+
+Fortran is a rather "large" language, so it is not possible to cover all its features in this course.
+We focus on features used to write modern HPC code.
+Other features you might encounter in legacy code are explained in spoilers:
+
+::: spoiler
+
+### Legacy Fortran
+
+You will see spoilers like this in the lesson.
+They contain features more commonly used in legacy code.
+These spoilers explain why the feature
+is not used often in modern code.
+
+:::
+
+The follow on lesson **Object Orientated Fortran**
+(coming soon) contains further advanced topics.
 
 ::::::::::::::::::::::::::::::::::::: prereq
 
 ### Prerequisites
 
 Learners *should* be familiar with the basic concepts of
-programming: variables, logic, flow of control, loops, functions and
+programming: variables, logic, control flow, loops, functions and
 so on.
 No knowledge of Fortran is assumed.
 No previous experience with compiled languages is required.
 
 ::::::::::::::::::::::::::::::::::::::::::::
 
-The course requires a Fortran compiler, for which a local machine or
-laptop may be appropriate [1]. If you do not have access to a Fortran
-compiler, course training accounts on archer2 will be available which
-provide access to various compilers. Use of a text editor will be
-required (some may prefer an IDE, but we do not intend to consider or
-support IDEs).
-
-[1] This may typically be GFortran, freely available as part of
-    Gnu Compiler Collection (GCC).
-    See e.g., [Link to GFortran install page on fortran-lang][install-gfortran]
-
-
 [workbench]: https://carpentries.github.io/sandpaper-docs
+[archer2]: ARCHER2 is one of the UKs national supercomputing facilities.
 [archer2-codes]: https://www.archer2.ac.uk/news/2021/05/19/code-use.html
-
+[fortran-standards]: https://fortranwiki.org/fortran/show/Standards
