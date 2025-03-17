@@ -7,7 +7,7 @@ title: Setup
 This course provides an introduction to writing Modern Fortran.
 It covers everything from basic syntax and variables.
 To functions, arrays, and modules.
-Common Fortran idioms are introduced and compared to C++.
+Common Fortran idioms will be introduced and compared to C++.
 
 Within the first hour you will have:
 
@@ -57,7 +57,7 @@ $ tar -xzf ~/Downloads/exercises.tar.gz --strip-components=1
 
 ### Alternative Download Method
 
-If the tar file download fails the exercises and data sets
+If the tar file download fails, the exercises and data sets
 are in this lessons GitHub repository:
 
 ```bash
