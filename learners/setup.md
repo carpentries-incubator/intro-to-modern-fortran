@@ -152,9 +152,9 @@ program hello_world
 
     implicit none
 
-    print *, 'Hello World!'
+    print *, 'Hello world!'
 
-end program
+end program hello_world
 
 ```
 
@@ -217,7 +217,7 @@ $ ./a.out
 ```
 
 ```output
-Hello World!
+Hello world!
 ```
 
 You have compiled your first Fortran program!
