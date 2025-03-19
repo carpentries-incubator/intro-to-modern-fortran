@@ -12,7 +12,7 @@ have a refresher in Fortran.
 
 ### Prerequisites
 
-Learners *must* be familiar with the basic concepts of
+Learners _must_ be familiar with the basic concepts of
 programming: variables, logic, flow of control, loops, functions and
 so on. No knowledge of Fortran is assumed. Previous programming
 experience might typically be in the context C/C++ or python.
@@ -50,9 +50,7 @@ required (some may prefer an IDE, but we do not intend to consider or
 support IDEs).
 
 [1] This may typically be GFortran, freely available as part of
-    Gnu Compiler Collection (GCC).
-    See e.g., [Link to GFortran install page on fortran-lang][install-gfortran]
-
+Gnu Compiler Collection (GCC).
+See e.g., [Link to GFortran install page on fortran-lang][install-gfortran]
 
 [workbench]: https://carpentries.github.io/sandpaper-docs
-
