@@ -98,7 +98,7 @@ Comprehensive installation instructions are on the
 You can also install GFortran via conda:
 
 ```bash
-$ conda install gfortran 
+$ conda install gfortran
 ```
 
 ### Intel
@@ -230,15 +230,17 @@ While Fortran files are plain text and can be edited with any plain text editor,
 
 ### Emacs
 
-[Emacs][emacs-link] is a cross-platform text editor available for Linux, MacOS, and Windows. Emacs applies syntax highlighting for most Fortran files, but additional file extensions, such as `.X90`  may be valid Fortran files but will not be picked up in Emacs _f90-mode_. This mode allows for tab-completion of Fortran statements and the addition of a drop-down menu that provides additional Fortran-related options.
+[Emacs][emacs-link] is a cross-platform text editor available for Linux, MacOS, and Windows. Emacs applies syntax highlighting for most Fortran files, but additional file extensions, such as `.X90` may be valid Fortran files but will not be picked up in Emacs _f90-mode_. This mode allows for tab-completion of Fortran statements and the addition of a drop-down menu that provides additional Fortran-related options.
 
 Files can be manually set to f90-mode using `M-x f90-mode`, but file extensions can be added to your [Emacs initialization file][emacs-init-link] to ensure that these are recognised when opened. The format for this is
+
 ```lisp
 (setq auto-mode-alist
       (append '(("\\.mf90" . f90-mode)
                 ("\\.X90" . f90-mode)
         ) auto-mode-alist))
 ```
+
 ::::::::::::::::: tab
 
 ### Windows/MacOS
@@ -293,7 +295,7 @@ Once `fortls` is installed, install the [Modern Fortran extension](vscode-modern
 
 #### Adding a ruler
 
-We recommend adding a ruler: essentially a vertical line in the editor which gives you a visual guide as to the number of characters you should include on a single line of code. 
+We recommend adding a ruler: essentially a vertical line in the editor which gives you a visual guide as to the number of characters you should include on a single line of code.
 
 To add a ruler at 80 characters to your VS Code editor window, in VS Code
 

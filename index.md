@@ -33,7 +33,7 @@ and more recent standards.[^fortran-standards]
 
 ### Prerequisites
 
-Learners *should* be familiar with the basic concepts of
+Learners _should_ be familiar with the basic concepts of
 programming: variables, logic, control flow, loops, functions and
 so on.
 No knowledge of Fortran is assumed.
