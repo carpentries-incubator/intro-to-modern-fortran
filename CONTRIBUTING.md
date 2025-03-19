@@ -42,7 +42,6 @@ documentation][template-doc].
 2. If you wish to change the template used for workshop websites, please refer
    to [The Workbench documentation][template-doc].
 
-
 ### What to Contribute
 
 There are many ways to contribute, from writing new exercises and improving
