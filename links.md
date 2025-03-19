@@ -17,12 +17,6 @@ any links that you are not going to use.
 
 [this-course-link]: https://carpentries-incubator.github.io/intro-to-modern-fortran/
 
-[install-gfortran]: https://fortran-lang.org/learn/os_setup/install_gfortran/
-
-[^archer2]: [ARCHER2](https://www.archer2.ac.uk/) is one of the UKs national supercomputing facilities.
-[^archer2-codes]: [ARCHER2 code use article](https://www.archer2.ac.uk/news/2021/05/19/code-use.html)
-[^fortran-standards]: [Fortran standards page on the Fortran Wiki](https://fortranwiki.org/fortran/show/Standards)
-
 [emacs-link]: https://www.gnu.org/software/emacs/
 [emacs-init-link]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html
 

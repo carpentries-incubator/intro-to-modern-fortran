@@ -311,5 +311,4 @@ To add a ruler at 80 characters to your VS Code editor window, in VS Code
 
 If you save the file, you should immediately see a vertical line appear in your editor.
 
-[1] GFortran is freely available as part of the Gnu Compiler Collection (GCC).
-    See the [GFortran install page on fortran-lang][install-gfortran]
+[install-gfortran]: https://fortran-lang.org/learn/os_setup/install_gfortran/
