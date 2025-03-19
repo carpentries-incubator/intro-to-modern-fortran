@@ -15,7 +15,12 @@ any links that you are not going to use.
 [noc-link]: https://noc.ac.uk/
 [uk-met-link]: https://www.metoffice.gov.uk/
 
+[this-course-link]: https://carpentries-incubator.github.io/intro-to-modern-fortran/
+
 [install-gfortran]: https://fortran-lang.org/learn/os_setup/install_gfortran/
 
 [emacs-link]: https://www.gnu.org/software/emacs/
 [emacs-init-link]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html
+
+[vscode-link]: https://code.visualstudio.com
+[vscode-modern-fortran]: https://marketplace.visualstudio.com/items?itemName=fortran-lang.linter-gfortran
