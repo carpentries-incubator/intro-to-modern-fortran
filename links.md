@@ -14,6 +14,7 @@ any links that you are not going to use.
 [ncas-link]: https://ncas.ac.uk/
 [noc-link]: https://noc.ac.uk/
 [uk-met-link]: https://www.metoffice.gov.uk/
+[bgs-link]: https://bgs.ac.uk/
 
 [this-course-link]: https://carpentries-incubator.github.io/intro-to-modern-fortran/
 

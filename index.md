@@ -6,7 +6,7 @@ site: sandpaper::sandpaper_site
 
 This is a new lesson built with [The Carpentries Workbench][carpentries-workbench].
 It is currently in pre-alpha development by the
-[Edinburgh Parallel Computing Centre][epcc-link],
+[British Geological Survey][bgs-link],
 the [National Centre for Atmospheric Science][ncas-link],
 the [National Oceanography Centre][noc-link],
 and the [Met Office][uk-met-link].
