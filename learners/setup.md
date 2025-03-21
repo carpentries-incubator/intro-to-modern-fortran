@@ -5,8 +5,7 @@ title: Setup
 ## Learning Outcomes
 
 This course provides an introduction to writing Modern Fortran.
-It covers everything from basic syntax and variables.
-To functions, arrays, and modules.
+It covers everything from basic syntax and variables, to functions, arrays, and modules.
 Common Fortran idioms will be introduced and compared to C++.
 
 Within the first hour you will have:

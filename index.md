@@ -15,7 +15,7 @@ and the [Met Office][uk-met-link].
 
 Fortran was created in 1957 by a team at IBM
 and excels with numerically intensive science code.
-Far from the punchcards, and fixed-form formatting of Fortrans early days,
+Far from the punchcards, and fixed-form formatting of Fortran's early days,
 modern Fortran is fast, supports object orientated programming
 and is easy to read.
 
