@@ -94,7 +94,7 @@ It is part of the Gnu Compiler Collection (GCC).
 Comprehensive installation instructions are on the
 [GFortran install page on fortran-lang][install-gfortran].
 
-You can also install GFortran via conda:
+You can also install GFortran via [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html):
 
 ```bash
 $ conda install gfortran
@@ -109,12 +109,6 @@ The Intel Fortran compiler is free through their oneAPI toolkit.
 
 Note: The Intel compiler is not available for macOS.
 
-You can also install the Intel compiler via conda:
-
-```bash
-$ conda install intel-fortran-rt
-```
-
 ### Flang
 
 LLVM Flang is another open source compiler
@@ -124,12 +118,6 @@ If you have not built programs from source before
 we recommended choosing another compiler
 or installing Flang via conda.
 [Link to the Flang Getting Started page](https://flang.llvm.org/docs/GettingStarted.html)
-
-You can also install the Flang compiler via conda:
-
-```bash
-$ conda install flang
-```
 
 ### Cray
 
