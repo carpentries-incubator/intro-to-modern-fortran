@@ -103,9 +103,12 @@ $ conda install gfortran
 ### Intel
 
 The Intel Fortran compiler is free through their oneAPI toolkit.
+You can download only the compiler or
+the oneAPI Fortran Essentials toolkit.
 
-- [Linux Install Instructions](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2025-0/intel-fortran-essentials.html#GUID-E8EA92E5-84BC-4550-9988-4A9147A1B769)
-- [Windows Install Instructions](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-windows/2025-0/intel-fortran-essentials.html)
+- [Compiler Only Install Instructions - Linux and Windows](https://www.intel.com/content/www/us/en/developer/tools/oneapi/fortran-compiler-download.html)
+- [Linux oneAPI Fortran Essentials Install Instructions](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2025-0/intel-fortran-essentials.html#GUID-E8EA92E5-84BC-4550-9988-4A9147A1B769)
+- [Windows oneAPI Fortran Essentials Install Instructions](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-windows/2025-0/intel-fortran-essentials.html)
 
 Note: The Intel compiler is not available for macOS.
 
