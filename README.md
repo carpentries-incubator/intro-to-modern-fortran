@@ -26,4 +26,4 @@ General Notes:
 tar czf episodes/data/exercises.tar.gz exercises/
 ```
 
-[Notes from RSECon23][https://pad.archer2.ac.uk/p/rsecon23-fortran]
+[Notes from RSECon23](https://pad.archer2.ac.uk/p/rsecon23-fortran)
