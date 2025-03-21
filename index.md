@@ -11,6 +11,13 @@ the [National Centre for Atmospheric Science][ncas-link],
 the [National Oceanography Centre][noc-link],
 and the [Met Office][uk-met-link].
 
+The lesson adapts resources from
+[ARCHER2](https://github.com/ARCHER2-HPC/archer2-fortran-intro),
+[Imperial College London](https://github.com/ImperialCollegeLondon/RCDS-introduction-to-fortran),
+[Modern Fortran in Science and Technology course](https://github.com/jonaslindemann/modern_fortran_book?tab=readme-ov-file),
+[LRZ's Programming with Fortran course](https://doku.lrz.de/programming-with-fortran-10746212.html),
+and more.[^other-courses]
+
 :::
 
 Fortran was created in 1957 by a team at IBM
@@ -51,6 +58,7 @@ Windows and macOS users should open an
 [Issue](https://github.com/carpentries-incubator/intro-to-modern-fortran/issues)
 if you find problems with the lesson material.
 
+[^other-courses]: Discussion #3 on the lesson repository, https://github.com/carpentries-incubator/intro-to-modern-fortran/discussions/3, give details on the materials this course draws from.
 [^archer2]: ARCHER2, https://www.archer2.ac.uk/, is one of the UKs national supercomputing facilities.
 [^archer2-codes]: ARCHER2 code use article: https://www.archer2.ac.uk/news/2021/05/19/code-use.html
 [^fortran-standards]: Fortran standards page on the Fortran Wiki: https://fortranwiki.org/fortran/show/Standards
