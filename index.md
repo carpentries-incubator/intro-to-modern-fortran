@@ -38,9 +38,20 @@ programming: variables, logic, control flow, loops, functions and
 so on.
 No knowledge of Fortran is assumed.
 No previous experience with compiled languages is required.
+Access to the command line is required.
+Learners _must_ be comfortable using the command line[^command-line].
 
 ::::::::::::::::::::::::::::::::::::::::::::
+
+This lesson has been tested primarily on Linux.
+Windows users may find it easier to install
+[Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install).
+With WSL you will have access to a Linux command line.
+Windows and macOS users should open an
+[Issue](https://github.com/carpentries-incubator/intro-to-modern-fortran/issues)
+if you find problems with the lesson material.
 
 [^archer2]: ARCHER2, https://www.archer2.ac.uk/, is one of the UKs national supercomputing facilities.
 [^archer2-codes]: ARCHER2 code use article: https://www.archer2.ac.uk/news/2021/05/19/code-use.html
 [^fortran-standards]: Fortran standards page on the Fortran Wiki: https://fortranwiki.org/fortran/show/Standards
+[^command-line]: Learners should be comfortable with the Carpentries Unix Shell lesson material: https://swcarpentry.github.io/shell-novice/
