@@ -96,7 +96,7 @@ This file is stored in your home directory.
 [Visual Studio Code (VS Code)][vscode-link] is another powerful cross-platform IDE.
 To use VS Code with Fortran we recommend two additions:
 
-- The [Modern Fortran extension](vscode-modern-fortran) provides syntax highlighting,
+- The [Modern Fortran extension][vscode-modern-fortran] provides syntax highlighting,
   IntelliSense for Fortran statements, and debugging capabilities.
   It also adds customization options to improve the coding experience for Fortran developers.
 - The Modern Fortran extension depends on `fortls`: a language server that interfaces VS Code.
@@ -133,7 +133,7 @@ $ pip install --user --upgrade git+git://github.com/fortran-lang/fortls
 
 :::::::::::::::::::::::::
 
-Once `fortls` is installed, install the [Modern Fortran extension](vscode-modern-fortran).
+Once `fortls` is installed, install the [Modern Fortran extension][vscode-modern-fortran].
 
 #### Adding a ruler
 
@@ -155,4 +155,5 @@ To add a ruler at 80 characters:
 }
 ```
 
-Save the file, you should see a vertical line appear in your editor.
+Save the file.
+You should see a vertical line appear in your editor.
