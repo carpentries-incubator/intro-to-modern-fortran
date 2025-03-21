@@ -360,7 +360,7 @@ a Fortran compiler, and if necessary an account on <em>archer2</em>.</p>
   archer2
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>For details of how to log into an archer2 account, see <a href="https://docs.archer2.ac.uk/quick-start/quickstart-users/" class="external-link">archer2
 quickstart guide link</a>.</p>
@@ -381,7 +381,7 @@ $ ftn example1.f90</code></pre>
   GFortran
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>If you are not taking this course on archer2 we recommend installing
 the <a href="https://fortran-lang.org/learn/os_setup/install_gfortran/" class="external-link">GFortran</a>
@@ -391,23 +391,27 @@ compiler.</p>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="text-editors-and-integrated-development-environments-ides">Text Editors and Integrated Development Environments (IDEs)<a class="anchor" aria-label="anchor" href="#text-editors-and-integrated-development-environments-ides"></a></h2>
-<hr class="half-width"><p>While Fortran files are plain text and can be edited with any plain
-text editor, it is recommened that you use an editor that is capable of
-<em>syntax highlighting</em>. Setup instructions for some editors are
-available below.</p>
-<div class="section level3">
+<hr class="half-width"><p>Fortran files are plain text and can be edited with any plain text
+editor. We recommend you use an editor that is capable of
+<strong><em>syntax highlighting</em></strong>. Setup instructions for
+some editors are available below.</p>
+<p>Editor Setup Quick Links:</p>
+<ul><li><a href="#emacs">Emacs</a></li>
+<li><a href="#vs-code">VS Code</a></li>
+</ul><div class="section level3">
 <h3 id="emacs">Emacs<a class="anchor" aria-label="anchor" href="#emacs"></a></h3>
 <p><a href="https://www.gnu.org/software/emacs/" class="external-link">Emacs</a> is a
-cross-platform text editor available for Linux, MacOS, and Windows.
-Emacs applies syntax highlighting for most Fortran files, but additional
-file extensions, such as <code>.X90</code> may be valid Fortran files
-but will not be picked up in Emacs <em>f90-mode</em>. This mode allows
-for tab-completion of Fortran statements and the addition of a drop-down
-menu that provides additional Fortran-related options.</p>
-<p>Files can be manually set to f90-mode using
-<code>M-x f90-mode</code>, but file extensions can be added to your <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html" class="external-link">Emacs
-initialization file</a> to ensure that these are recognised when opened.
-The format for this is</p>
+cross-platform text editor available for Linux, macOS, and Windows.
+Emacs applies syntax highlighting for most Fortran files. Emacs
+<strong><em>f90-mode</em></strong> mode lets you tab complete Fortran
+statements. It also adds a drop-down menu providing additional
+Fortran-related options.</p>
+<p>Fortran files with different extensions, such as <code>.X90</code>,
+will not be picked up in this mode. Files can be manually set to
+<strong><em>f90-mode</em></strong> using <code>M-x f90-mode</code>. File
+extensions can be added to your <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html" class="external-link">Emacs
+initialization file</a> so they are recognised as Fortran when opened.
+To add this to your initialisation file:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">LISP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -420,7 +424,7 @@ The format for this is</p>
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
   <h3 class="tab-header" id="nav-tab-heading-1-1">
-  Windows/MacOS
+  Windows and macOS
   </h3>
 </button>
 <button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
@@ -435,18 +439,18 @@ The format for this is</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
-<p>From your home directory, initialization settings can be placed
-within your <code>.emacs.d/init.el</code> file.</p>
+<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
+<p>From your home directory, initialization settings are placed in your
+<code>.emacs.d/init.el</code> file.</p>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
-<p>Initialization settings can be placed within your
+<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
+<p>Initialization settings are placed in your
 <code>~/.config/emacs/init.el</code> file. This location follows the
 Linux desktop environment guidelines.</p>
 </div>
-<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
+<div id="nav-tabpanel-1-3" class="tab-pane" aria-labelledby="nav-tab-1-3" role="tabpanel">
 <p>The <code>.emacs</code> or <code>.emacs.el</code> file is an older
-method of configuring Emacs. This file is held in your home
+method of configuring Emacs. This file is stored in your home
 directory.</p>
 </div>
 </div>
@@ -455,15 +459,17 @@ directory.</p>
 <div class="section level3">
 <h3 id="vs-code">VS Code<a class="anchor" aria-label="anchor" href="#vs-code"></a></h3>
 <p><a href="https://code.visualstudio.com" class="external-link">Visual Studio Code (VS
-Code)</a> is a powerful IDE available for Linux, macOS, and Windows. To
-bring the power of VS Code to bear on Fortran, two additions are
-required. The <a href="vscode-modern-fortran">Modern Fortran
-extension</a> enhances Fortran support in VS Code, offering features
-such as syntax highlighting, IntelliSense for Fortran statements, and
-debugging capabilities, along with customization options to improve the
-coding experience for Fortran developers. The Modern Fortran extension
-depends on <code>fortls</code>: a language server that interfaces with
-the code editor.</p>
+Code)</a> is another powerful cross-platform IDE. To use VS Code with
+Fortran we recommend two additions:</p>
+<ul><li>The <a href="https://marketplace.visualstudio.com/items?itemName=fortran-lang.linter-gfortran" class="external-link">Modern
+Fortran extension</a> provides syntax highlighting, IntelliSense for
+Fortran statements, and debugging capabilities. It also adds
+customization options to improve the coding experience for Fortran
+developers.</li>
+<li>The Modern Fortran extension depends on <code>fortls</code>: a
+language server that interfaces VS Code.</li>
+</ul><p><code>fortls</code> must be installed before the Modern Fortran
+extension.</p>
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-2-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-1" type="button" role="tab" aria-controls="nav-tabpanel-2-1" aria-selected="true">
@@ -488,53 +494,52 @@ the code editor.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-1">
+<div id="nav-tabpanel-2-1" class="tab-pane show active" aria-labelledby="nav-tab-2-1" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">pip</span> install fortls</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> pip install fortls</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-2">
+<div id="nav-tabpanel-2-2" class="tab-pane" aria-labelledby="nav-tab-2-2" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge fortls</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> conda install <span class="at">-c</span> conda-forge fortls</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-3">
+<div id="nav-tabpanel-2-3" class="tab-pane" aria-labelledby="nav-tab-2-3" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">brew</span> install fortls</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> brew install fortls</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-4" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-4">
+<div id="nav-tabpanel-2-4" class="tab-pane" aria-labelledby="nav-tab-2-4" role="tabpanel">
 <p>The development version of <code>fortls</code> can be installed from
-GitHub via</p>
+GitHub:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">--user</span> <span class="at">--upgrade</span> git+git://github.com/fortran-lang/fortls</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">$</span> pip install <span class="at">--user</span> <span class="at">--upgrade</span> git+git://github.com/fortran-lang/fortls</span></code></pre>
 </div>
 </div>
 </div>
 </div>
-<p>Once <code>fortls</code> is installed, install the <a href="vscode-modern-fortran">Modern Fortran extension</a>, and it should
-work out of the box.</p>
+<p>Once <code>fortls</code> is installed, install the <a href="https://marketplace.visualstudio.com/items?itemName=fortran-lang.linter-gfortran" class="external-link">Modern
+Fortran extension</a>.</p>
 <div class="section level4">
 <h4 id="adding-a-ruler">Adding a ruler<a class="anchor" aria-label="anchor" href="#adding-a-ruler"></a></h4>
-<p>We recommend adding a ruler: essentially a vertical line in the
-editor which gives you a visual guide as to the number of characters you
-should include on a single line of code.</p>
-<p>To add a ruler at 80 characters to your VS Code editor window, in VS
-Code</p>
+<p>We recommend adding a ruler. This is a vertical line in the editor
+after a set number of characters. Rulers help avoid long lines that are
+hard to read.</p>
+<p>To add a ruler at 80 characters:</p>
 <ol style="list-style-type: decimal"><li>Open the Command Palette (Press <code>Cmd+Shift+P</code>, or
 <code>Ctrl+Shift+P</code>)</li>
-<li>Type ‘settings’ and then select the option which says “Preferences:
+<li>Type ‘settings’. Then select the option which says “Preferences:
 Open User Settings (JSON)”</li>
-<li>This should open the <code>settings.json</code> file in your editor.
-It may already have code in it.</li>
+<li>This will open the <code>settings.json</code> file in your
+editor.</li>
 <li>Add the <code>editor.rulers</code> property to the JSON file,
 e.g.</li>
 </ol><div class="codewrapper sourceCode" id="cb7">
@@ -545,11 +550,12 @@ e.g.</li>
 <span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>    <span class="er">editor.rulers</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">80</span><span class="ot">]</span></span>
 <span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="fu">}</span></span></code></pre>
 </div>
-<p>If you save the file, you should immediately see a vertical line
-appear in your editor. <!--
+<p>Save the file. You should see a vertical line appear in your
+editor.</p>
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></p>
+ -->
 </div>
 </div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
@@ -601,8 +607,8 @@ any links that you are not going to use.
   "url": "https://astroDimitrios.github.io/intro-to-modern-fortran/index.html",
   "identifier": "https://astroDimitrios.github.io/intro-to-modern-fortran/index.html",
   "dateCreated": "2023-08-04",
-  "dateModified": "2025-03-19",
-  "datePublished": "2025-03-19"
+  "dateModified": "2025-03-21",
+  "datePublished": "2025-03-21"
 }
 
   </script><script>
