@@ -2,45 +2,217 @@
 title: Setup
 ---
 
+## Learning Outcomes
+
+This course provides an introduction to writing Modern Fortran.
+It covers everything from basic syntax and variables, to functions, arrays, and modules.
+Common Fortran idioms will be introduced and compared to C++.
+
+Within the first hour you will have:
+
+- written a hello world program
+- compiled your first program
+- done basics maths in a program
+
+At the end of the course you should be able to:
+
+- understand many Fortran programs
+- write well-structured Fortran
+- write portable Fortran modules
+
+Fortran is a rather "large" language,
+so it is not possible to cover all its features in this course.
+We focus on features used to write modern HPC code.
+Other features you might encounter in legacy code are explained in spoilers:
+
+::: spoiler
+
+### Legacy Fortran
+
+You will see spoilers like this in the lesson.
+They contain features more commonly used in legacy code.
+These spoilers explain why the feature
+is not used often in modern code.
+
+:::
+
+The follow on lesson **Object Orientated Fortran**
+(coming soon) contains further advanced topics.
+
 ## Data Sets
 
-Download the [zip file](https://github.com/astroDimitrios/intro-to-modern-fortran) and unzip it to your Desktop or check out this [git repository]().
-This file contains data and skeleton code which we will use throughout the course.
+Download the [tar file](../episodes/data/exercises.tar.gz)
+and extract the contents in your Desktop.
+This file contains template code and data for some exercises.
+It also contains solutions for all exercises.
 
-## Software Setup
-
-::::::::::::::::::::::::::::::::::::::: discussion
-
-### Details
-
-Before the start of the course please ensure that you have access to a Fortran compiler, and if necessary an account on *archer2*.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::: solution
-
-### archer2
-
-For details of how to log into an archer2 account, see [archer2 quickstart guide link](https://docs.archer2.ac.uk/quick-start/quickstart-users/).
-
-The default Fortran compiler on archer2 is the Cray Fortran compiler invoked using `ftn`. For example,
-
-```shell
-$ cd section1.01
-$ ftn example1.f90
+```bash
+$ mkdir ~/Desktop/intro-to-modern-fortran
+$ cd ~/Desktop/intro-to-modern-fortran
+$ tar -xzf ~/Downloads/exercises.tar.gz --strip-components=1
 ```
 
-should generate an executable with the default name `a.out`.
+::: spoiler
 
-:::::::::::::::::::::::::
+### Alternative Download Method
 
-:::::::::::::::: solution
+If the tar file download fails, the exercises and data sets
+are in this lessons GitHub repository:
+
+```bash
+$ cd ~/Desktop
+$ git clone git@github.com:carpentries-incubator/intro-to-modern-fortran.git
+```
+
+The [tar file](https://github.com/carpentries-incubator/intro-to-modern-fortran/blob/main/exercises.tar.gz) is in the root directory.
+Alternatively the exercises are in the top level `exercises/` directory.
+
+:::
+
+## Compiler Setup
+
+Fortran is a compiled language.
+You have to translate your Fortran code to machine code
+before running the program.
+We do this with a Fortran compiler.
+You should test your code with multiple compilers,
+as some are better at debugging certain errors than others.
+
+### Installing a Compiler
+
+Your instructor may provide different instructions for installing
+a suitable compiler or have installed one for you.
+If you need to install a compiler yourself follow the instructions below.
+We recommend installing **GFortran** as your first compiler.
+
+::: group-tab
 
 ### GFortran
 
-If you are not taking this course on archer2 we recommend installing the [GFortran][install-gfortran] compiler.
+GFortran is a free open source compiler.
+It is part of the Gnu Compiler Collection (GCC).
+Comprehensive installation instructions are on the
+[GFortran install page on fortran-lang][install-gfortran].
 
-:::::::::::::::::::::::::
+You can also install GFortran via [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html):
+
+```bash
+$ conda install gfortran
+```
+
+### Intel
+
+The Intel Fortran compiler is free through their oneAPI toolkit.
+You can download only the compiler or
+the oneAPI Fortran Essentials toolkit.
+
+- [Compiler Only Install Instructions - Linux and Windows](https://www.intel.com/content/www/us/en/developer/tools/oneapi/fortran-compiler-download.html)
+- [Linux oneAPI Fortran Essentials Install Instructions](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2025-0/intel-fortran-essentials.html#GUID-E8EA92E5-84BC-4550-9988-4A9147A1B769)
+- [Windows oneAPI Fortran Essentials Install Instructions](https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-windows/2025-0/intel-fortran-essentials.html)
+
+Note: The Intel compiler is not available for macOS.
+
+### Flang
+
+LLVM Flang is another open source compiler
+based on the LLVM compiler toolkit.
+Flang is installed from the LLVM source code.
+If you have not built programs from source before
+we recommended choosing another compiler
+or installing Flang via conda.
+[Link to the Flang Getting Started page](https://flang.llvm.org/docs/GettingStarted.html)
+
+### Cray
+
+The [HPE Cray Fortran compiler](https://cpe.ext.hpe.com/docs/latest/cce/index.html)
+is proprietary but highly optimised.
+Your organisation may have a license for the Cray compiler.
+
+:::
+
+### Testing your compiler
+
+Now you have a compiler installed you can compile a simple program.
+The [exercise and data file](./setup.md#data-sets)
+you downloaded contains `setup/hello_world.f90`.
+This is a simple Fortran program:
+
+```fortran
+program hello_world
+
+    implicit none
+
+    print *, 'Hello world!'
+
+end program hello_world
+
+```
+
+Enter the setup directory:
+
+```bash
+$ cd setup
+$ ls
+```
+
+```output
+hello_world.f90
+```
+
+To compile the program run:
+
+::: group-tab
+
+### GFortran
+
+```bash
+$ gfortran hello_world.f90
+```
+
+### Intel
+
+```bash
+$ ifx hello_world.f90
+```
+
+### Flang
+
+```bash
+$ flang hello_world.f90
+```
+
+### Cray
+
+```bash
+$ ftn hello_world.f90
+```
+
+:::
+
+You should see a new file in the directory:
+
+```bash
+$ ls
+```
+
+```output
+a.out hello_world.f90
+```
+
+The `a.out` file is your compiled program.
+To run the program:
+
+```bash
+$ ./a.out
+```
+
+```output
+Hello world!
+```
+
+You have compiled your first Fortran program!
+The first episode in this lesson will
+cover compiling in more detail.
 
 ## Text Editors and Integrated Development Environments (IDEs)
 
