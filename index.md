@@ -2,55 +2,64 @@
 site: sandpaper::sandpaper_site
 ---
 
-This is a new lesson built with [The Carpentries Workbench][workbench]. It is currently in pre-alpha development by the [Edinburgh Parallel Computing Centre][epcc-link], the [National Centre for Atmospheric Science][ncas-link], the [National Oceanography Centre][noc-link], and the [UK Met Office][uk-met-link].
+::: caution
 
-This course is aimed at users and developers who know how to program,
-but have little or no experience in Fortran, and those who may wish to
-have a refresher in Fortran.
+This is a new lesson built with [The Carpentries Workbench][carpentries-workbench].
+It is currently in pre-alpha development by the
+[British Geological Survey][bgs-link],
+the [National Centre for Atmospheric Science][ncas-link],
+the [National Oceanography Centre][noc-link],
+and the [Met Office][uk-met-link].
+
+The lesson adapts resources from
+[ARCHER2](https://github.com/ARCHER2-HPC/archer2-fortran-intro),
+[Imperial College London](https://github.com/ImperialCollegeLondon/RCDS-introduction-to-fortran),
+[Modern Fortran in Science and Technology course](https://github.com/jonaslindemann/modern_fortran_book?tab=readme-ov-file),
+[LRZ's Programming with Fortran course](https://doku.lrz.de/programming-with-fortran-10746212.html),
+and more.[^other-courses]
+
+:::
+
+Fortran was created in 1957 by a team at IBM
+and excels with numerically intensive science code.
+Far from the punchcards, and fixed-form formatting of Fortran's early days,
+modern Fortran is fast, supports object orientated programming
+and is easy to read.
+
+Fortran is often used to write code for High Performance Computing (HPC).
+Many of the research codes run on ARCHER2[^archer2]
+are Fortran programs.[^archer2-codes]
+Various areas of Science are covered by these Fortran programs.
+For example quantum chemistry, plasmas, and numerical weather prediction.
+
+More recent standards of Fortran come under the umbrella term "Modern Fortran".
+These are the Fortran 95 standard,
+and more recent standards.[^fortran-standards]
 
 ::::::::::::::::::::::::::::::::::::: prereq
 
 ### Prerequisites
 
-Learners _must_ be familiar with the basic concepts of
-programming: variables, logic, flow of control, loops, functions and
-so on. No knowledge of Fortran is assumed. Previous programming
-experience might typically be in the context C/C++ or python.
-If you know no programming, we suggest this course on Fortran is not
-the place to start.
+Learners _should_ be familiar with the basic concepts of
+programming: variables, logic, control flow, loops, functions and
+so on.
+No knowledge of Fortran is assumed.
+No previous experience with compiled languages is required.
+Access to the command line is required.
+Learners _must_ be comfortable using the command line[^command-line].
 
 ::::::::::::::::::::::::::::::::::::::::::::
 
-Fortran (a contraction of Formula Translation) was the first programming
-language to have a standard (in 1954), but has changed significantly over
-the years. More recent standards (the latest being Fortran 2018) come
-under the umbrella term "Modern Fortran". Fortran retains very great
-significance in many areas of scientific and numerical computing,
-particularly for applications such as quantum chemistry, plasmas, and in
-numerical weather prediction and climate models.
+This lesson has been tested primarily on Linux.
+Windows users may find it easier to install
+[Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install).
+With WSL you will have access to a Linux command line.
+Windows and macOS users should open an
+[Issue](https://github.com/carpentries-incubator/intro-to-modern-fortran/issues)
+if you find problems with the lesson material.
 
-This course provides an introduction to the basics of writing Fortran.
-It will cover basic syntax, variables, expressions and assignments,
-flow of control, and introductions to i/o and user-defined types.
-Common Fortran idioms are introduced and contrasted with those
-available in C-like languages; the course will try to focus on
-real usage rather than formal descriptions.
-
-At the end of the course you should be able to understand many Fortran
-programs and be confident to start to write well-structured and portable
-Fortran. Fortran is a rather "large" language, so it is not possible to
-cover all its features in a two day course. Further elements of Fortran
-are discussed in the "Intermediate Modern Fortran" course.
-
-The course requires a Fortran compiler, for which a local machine or
-laptop may be appropriate [1]. If you do not have access to a Fortran
-compiler, course training accounts on archer2 will be available which
-provide access to various compilers. Use of a text editor will be
-required (some may prefer an IDE, but we do not intend to consider or
-support IDEs).
-
-[1] This may typically be GFortran, freely available as part of
-Gnu Compiler Collection (GCC).
-See e.g., [Link to GFortran install page on fortran-lang][install-gfortran]
-
-[workbench]: https://carpentries.github.io/sandpaper-docs
+[^other-courses]: Discussion #3 on the lesson repository, https://github.com/carpentries-incubator/intro-to-modern-fortran/discussions/3, give details on the materials this course draws from.
+[^archer2]: ARCHER2, https://www.archer2.ac.uk/, is one of the UKs national supercomputing facilities.
+[^archer2-codes]: ARCHER2 code use article: https://www.archer2.ac.uk/news/2021/05/19/code-use.html
+[^fortran-standards]: Fortran standards page on the Fortran Wiki: https://fortranwiki.org/fortran/show/Standards
+[^command-line]: Learners should be comfortable with the Carpentries Unix Shell lesson material: https://swcarpentry.github.io/shell-novice/
