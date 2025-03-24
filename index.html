@@ -207,8 +207,9 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#data-sets">Data Sets</a></li>
-<li><a href="#software-setup">Software Setup</a></li>
+        <ul><li><a href="#learning-outcomes">Learning Outcomes</a></li>
+<li><a href="#data-sets">Data Sets</a></li>
+<li><a href="#compiler-setup">Compiler Setup</a></li>
 <li><a href="#text-editors-and-integrated-development-environments-ides">Text Editors and Integrated Development Environments (IDEs)</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -276,14 +277,37 @@
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Setup</h1>
       
 
-<p>This is a new lesson built with <a href="https://carpentries.github.io/sandpaper-docs" class="external-link">The Carpentries
-Workbench</a>. It is currently in pre-alpha development by the <a href="https://www.epcc.ed.ac.uk/" class="external-link">Edinburgh Parallel Computing
-Centre</a>, the <a href="https://ncas.ac.uk/" class="external-link">National Centre for
-Atmospheric Science</a>, the <a href="https://noc.ac.uk/" class="external-link">National
-Oceanography Centre</a>, and the <a href="https://www.metoffice.gov.uk/" class="external-link">UK Met Office</a>.</p>
-<p>This course is aimed at users and developers who know how to program,
-but have little or no experience in Fortran, and those who may wish to
-have a refresher in Fortran.</p>
+<div id="caution1" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Caution</h3>
+<div class="callout-content">
+<p>This is a new lesson built with <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">The Carpentries
+Workbench</a>. It is currently in pre-alpha development by the <a href="https://bgs.ac.uk/" class="external-link">British Geological Survey</a>, the <a href="https://ncas.ac.uk/" class="external-link">National Centre for Atmospheric Science</a>,
+the <a href="https://noc.ac.uk/" class="external-link">National Oceanography Centre</a>, and
+the <a href="https://www.metoffice.gov.uk/" class="external-link">Met Office</a>.</p>
+<p>The lesson adapts resources from <a href="https://github.com/ARCHER2-HPC/archer2-fortran-intro" class="external-link">ARCHER2</a>,
+<a href="https://github.com/ImperialCollegeLondon/RCDS-introduction-to-fortran" class="external-link">Imperial
+College London</a>, <a href="https://github.com/jonaslindemann/modern_fortran_book?tab=readme-ov-file" class="external-link">Modern
+Fortran in Science and Technology course</a>, <a href="https://doku.lrz.de/programming-with-fortran-10746212.html" class="external-link">LRZ’s
+Programming with Fortran course</a>, and more.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+</div>
+</div>
+</div>
+<p>Fortran was created in 1957 by a team at IBM and excels with
+numerically intensive science code. Far from the punchcards, and
+fixed-form formatting of Fortran’s early days, modern Fortran is fast,
+supports object orientated programming and is easy to read.</p>
+<p>Fortran is often used to write code for High Performance Computing
+(HPC). Many of the research codes run on ARCHER2<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> are Fortran
+programs.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> Various areas of Science are covered by
+these Fortran programs. For example quantum chemistry, plasmas, and
+numerical weather prediction.</p>
+<p>More recent standards of Fortran come under the umbrella term “Modern
+Fortran”. These are the Fortran 95 standard, and more recent
+standards.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
 <div id="prerequisites" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
@@ -291,104 +315,289 @@ have a refresher in Fortran.</p>
 <div id="prerequisites" class="callout-inner">
 <h3 class="callout-title">Prerequisites</h3>
 <div class="callout-content">
-<p>Learners <em>must</em> be familiar with the basic concepts of
-programming: variables, logic, flow of control, loops, functions and so
-on. No knowledge of Fortran is assumed. Previous programming experience
-might typically be in the context C/C++ or python. If you know no
-programming, we suggest this course on Fortran is not the place to
-start.</p>
+<p>Learners <em>should</em> be familiar with the basic concepts of
+programming: variables, logic, control flow, loops, functions and so on.
+No knowledge of Fortran is assumed. No previous experience with compiled
+languages is required. Access to the command line is required. Learners
+<em>must</em> be comfortable using the command line<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>.</p>
 </div>
 </div>
 </div>
-<p>Fortran (a contraction of Formula Translation) was the first
-programming language to have a standard (in 1954), but has changed
-significantly over the years. More recent standards (the latest being
-Fortran 2018) come under the umbrella term “Modern Fortran”. Fortran
-retains very great significance in many areas of scientific and
-numerical computing, particularly for applications such as quantum
-chemistry, plasmas, and in numerical weather prediction and climate
-models.</p>
-<p>This course provides an introduction to the basics of writing
-Fortran. It will cover basic syntax, variables, expressions and
-assignments, flow of control, and introductions to i/o and user-defined
-types. Common Fortran idioms are introduced and contrasted with those
-available in C-like languages; the course will try to focus on real
-usage rather than formal descriptions.</p>
-<p>At the end of the course you should be able to understand many
-Fortran programs and be confident to start to write well-structured and
-portable Fortran. Fortran is a rather “large” language, so it is not
-possible to cover all its features in a two day course. Further elements
-of Fortran are discussed in the “Intermediate Modern Fortran”
-course.</p>
-<p>The course requires a Fortran compiler, for which a local machine or
-laptop may be appropriate [1]. If you do not have access to a Fortran
-compiler, course training accounts on archer2 will be available which
-provide access to various compilers. Use of a text editor will be
-required (some may prefer an IDE, but we do not intend to consider or
-support IDEs).</p>
-<p>[1] This may typically be GFortran, freely available as part of Gnu
-Compiler Collection (GCC). See e.g., <a href="https://fortran-lang.org/learn/os_setup/install_gfortran/" class="external-link">Link to
-GFortran install page on fortran-lang</a></p>
+<p>This lesson has been tested primarily on Linux. Windows users may
+find it easier to install <a href="https://learn.microsoft.com/en-us/windows/wsl/install" class="external-link">Windows
+Subsystem for Linux (WSL)</a>. With WSL you will have access to a Linux
+command line. Windows and macOS users should open an <a href="https://github.com/carpentries-incubator/intro-to-modern-fortran/issues" class="external-link">Issue</a>
+if you find problems with the lesson material.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+<div class="footnotes footnotes-end-of-document">
+<hr><ol><li id="fn1"><p>Discussion #3 on the lesson repository, <a href="https://github.com/carpentries-incubator/intro-to-modern-fortran/discussions/3" class="external-link uri">https://github.com/carpentries-incubator/intro-to-modern-fortran/discussions/3</a>,
+give details on the materials this course draws from.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>ARCHER2, <a href="https://www.archer2.ac.uk/" class="external-link uri">https://www.archer2.ac.uk/</a>, is one of the UKs national
+supercomputing facilities.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>ARCHER2 code use article: <a href="https://www.archer2.ac.uk/news/2021/05/19/code-use.html" class="external-link uri">https://www.archer2.ac.uk/news/2021/05/19/code-use.html</a><a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Fortran standards page on the Fortran Wiki: <a href="https://fortranwiki.org/fortran/show/Standards" class="external-link uri">https://fortranwiki.org/fortran/show/Standards</a><a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Learners should be comfortable with the Carpentries Unix
+Shell lesson material: <a href="https://swcarpentry.github.io/shell-novice/" class="external-link uri">https://swcarpentry.github.io/shell-novice/</a><a href="#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol></div>
 
 
-      <section id="setup"><section><h2 class="section-heading" id="data-sets">Data Sets<a class="anchor" aria-label="anchor" href="#data-sets"></a></h2>
-<hr class="half-width"><p>Download the <a href="https://github.com/astroDimitrios/intro-to-modern-fortran" class="external-link">zip
-file</a> and unzip it to your Desktop or check out this <a href="">git
-repository</a>. This file contains data and skeleton code which we will
-use throughout the course.</p>
-</section><section><h2 class="section-heading" id="software-setup">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a></h2>
-<hr class="half-width"><div id="details" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="details" class="callout-inner">
-<h3 class="callout-title">Details</h3>
-<div class="callout-content">
-<p>Before the start of the course please ensure that you have access to
-a Fortran compiler, and if necessary an account on <em>archer2</em>.</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+      <section id="setup"><section><h2 class="section-heading" id="learning-outcomes">Learning Outcomes<a class="anchor" aria-label="anchor" href="#learning-outcomes"></a></h2>
+<hr class="half-width"><p>This course provides an introduction to writing Modern Fortran. It
+covers everything from basic syntax and variables, to functions, arrays,
+and modules. Common Fortran idioms will be introduced and compared to
+C++.</p>
+<p>Within the first hour you will have:</p>
+<ul><li>written a hello world program</li>
+<li>compiled your first program</li>
+<li>done basics maths in a program</li>
+</ul><p>At the end of the course you should be able to:</p>
+<ul><li>understand many Fortran programs</li>
+<li>write well-structured Fortran</li>
+<li>write portable Fortran modules</li>
+</ul><p>Fortran is a rather “large” language, so it is not possible to cover
+all its features in this course. We focus on features used to write
+modern HPC code. Other features you might encounter in legacy code are
+explained in spoilers:</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1">
-  archer2
-  </h4>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Legacy Fortran
+  </h3>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
-<p>For details of how to log into an archer2 account, see <a href="https://docs.archer2.ac.uk/quick-start/quickstart-users/" class="external-link">archer2
-quickstart guide link</a>.</p>
-<p>The default Fortran compiler on archer2 is the Cray Fortran compiler
-invoked using <code>ftn</code>. For example,</p>
-<pre class="shell"><code>$ cd section1.01
-$ ftn example1.f90</code></pre>
-<p>should generate an executable with the default name
-<code>a.out</code>.</p>
+<p>You will see spoilers like this in the lesson. They contain features
+more commonly used in legacy code. These spoilers explain why the
+feature is not used often in modern code.</p>
 </div>
 </div>
 </div>
 </div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<p>The follow on lesson <strong>Object Orientated Fortran</strong>
+(coming soon) contains further advanced topics.</p>
+</section><section><h2 class="section-heading" id="data-sets">Data Sets<a class="anchor" aria-label="anchor" href="#data-sets"></a></h2>
+<hr class="half-width"><p>Download the <a href="data/exercises.tar.gz">tar file</a> and extract
+the contents in your Desktop. This file contains template code and data
+for some exercises. It also contains solutions for all exercises.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> mkdir ~/Desktop/intro-to-modern-fortran</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> cd ~/Desktop/intro-to-modern-fortran</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">$</span> tar <span class="at">-xzf</span> ~/Downloads/exercises.tar.gz <span class="at">--strip-components</span><span class="op">=</span>1</span></code></pre>
+</div>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Alternative Download Method
+  </h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div class="accordion-body">
+<p>If the tar file download fails, the exercises and data sets are in
+this lessons GitHub repository:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">$</span> cd ~/Desktop</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="ex">$</span> git clone git@github.com:carpentries-incubator/intro-to-modern-fortran.git</span></code></pre>
+</div>
+<p>The <a href="https://github.com/carpentries-incubator/intro-to-modern-fortran/blob/main/exercises.tar.gz" class="external-link">tar
+file</a> is in the root directory. Alternatively the exercises are in
+the top level <code>exercises/</code> directory.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="compiler-setup">Compiler Setup<a class="anchor" aria-label="anchor" href="#compiler-setup"></a></h2>
+<hr class="half-width"><p>Fortran is a compiled language. You have to translate your Fortran
+code to machine code before running the program. We do this with a
+Fortran compiler. You should test your code with multiple compilers, as
+some are better at debugging certain errors than others.</p>
+<div class="section level3">
+<h3 id="installing-a-compiler">Installing a Compiler<a class="anchor" aria-label="anchor" href="#installing-a-compiler"></a></h3>
+<p>Your instructor may provide different instructions for installing a
+suitable compiler or have installed one for you. If you need to install
+a compiler yourself follow the instructions below. We recommend
+installing <strong>GFortran</strong> as your first compiler.</p>
+<div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-GFortran" name="GFortran" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-GFortran" type="button" role="tab" aria-controls="nav-tabpanel-1-GFortran" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-GFortran">
   GFortran
-  </h4>
+  </h3>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>If you are not taking this course on archer2 we recommend installing
-the <a href="https://fortran-lang.org/learn/os_setup/install_gfortran/" class="external-link">GFortran</a>
-compiler.</p>
+<button class="nav-link" id="nav-tab-1-Intel" name="Intel" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Intel" type="button" role="tab" aria-controls="nav-tabpanel-1-Intel" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-Intel">
+  Intel
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-Flang" name="Flang" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Flang" type="button" role="tab" aria-controls="nav-tabpanel-1-Flang" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-Flang">
+  Flang
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-Cray" name="Cray" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Cray" type="button" role="tab" aria-controls="nav-tabpanel-1-Cray" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-Cray">
+  Cray
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-GFortran" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-GFortran">
+<p>GFortran is a free open source compiler. It is part of the Gnu
+Compiler Collection (GCC). Comprehensive installation instructions are
+on the [GFortran install page on fortran-lang][install-gfortran].</p>
+<p>You can also install GFortran via <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html" class="external-link">conda</a>:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> conda install conda-forge::gfortran</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-1-Intel" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Intel">
+<p>The Intel Fortran compiler is free through their oneAPI toolkit. You
+can download only the compiler or the oneAPI Fortran Essentials
+toolkit.</p>
+<ul><li><a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/fortran-compiler-download.html" class="external-link">Compiler
+Only Install Instructions - Linux and Windows</a></li>
+<li><a href="https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2025-0/intel-fortran-essentials.html#GUID-E8EA92E5-84BC-4550-9988-4A9147A1B769" class="external-link">Linux
+oneAPI Fortran Essentials Install Instructions</a></li>
+<li><a href="https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-windows/2025-0/intel-fortran-essentials.html" class="external-link">Windows
+oneAPI Fortran Essentials Install Instructions</a></li>
+</ul><p>Note: The Intel compiler is not available for macOS.</p>
+</div>
+<div id="nav-tabpanel-1-Flang" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Flang">
+<p>LLVM Flang is another open source compiler based on the LLVM compiler
+toolkit. Flang is installed from the LLVM source code. If you have not
+built programs from source before we recommended choosing another
+compiler or installing Flang via conda. <a href="https://flang.llvm.org/docs/GettingStarted.html" class="external-link">Link to the Flang
+Getting Started page</a></p>
+</div>
+<div id="nav-tabpanel-1-Cray" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Cray">
+<p>The <a href="https://cpe.ext.hpe.com/docs/latest/cce/index.html" class="external-link">HPE
+Cray Fortran compiler</a> is proprietary but highly optimised. Your
+organisation may have a license for the Cray compiler.</p>
 </div>
 </div>
 </div>
+</div>
+<div class="section level3">
+<h3 id="testing-your-compiler">Testing your compiler<a class="anchor" aria-label="anchor" href="#testing-your-compiler"></a></h3>
+<p>Now you have a compiler installed you can compile a simple program.
+The <a href="./setup.html#data-sets">exercise and data file</a> you
+downloaded contains <code>setup/hello_world.f90</code>. This is a simple
+Fortran program:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">FORTRAN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode fortran" tabindex="0"><code class="sourceCode fortranfixed"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">program</span> hello_world</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>    <span class="kw">implicit</span> <span class="kw">none</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>    <span class="fu">print</span> <span class="kw">*</span>, <span class="st">'Hello world!'</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="kw">end program</span> hello_world</span></code></pre>
+</div>
+<p>Enter the setup directory:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> cd setup</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">hello_world.f90</span></span></code></pre>
+</div>
+<p>To compile the program run:</p>
+<div class="tabs">
+<nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-2-GFortran" name="GFortran" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-GFortran" type="button" role="tab" aria-controls="nav-tabpanel-2-GFortran" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-2-GFortran">
+  GFortran
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-Intel" name="Intel" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Intel" type="button" role="tab" aria-controls="nav-tabpanel-2-Intel" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-Intel">
+  Intel
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-Flang" name="Flang" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Flang" type="button" role="tab" aria-controls="nav-tabpanel-2-Flang" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-Flang">
+  Flang
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-Cray" name="Cray" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Cray" type="button" role="tab" aria-controls="nav-tabpanel-2-Cray" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-Cray">
+  Cray
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-2" class="tab-content">
+<div id="nav-tabpanel-2-GFortran" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-GFortran">
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">$</span> gfortran hello_world.f90</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-Intel" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Intel">
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">$</span> ifx hello_world.f90</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-Flang" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Flang">
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">$</span> flang hello_world.f90</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-Cray" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Cray">
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">$</span> ftn hello_world.f90</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>You should see a new file in the directory:</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>a.out hello_world.f90</code></pre>
+</div>
+<p>The <code>a.out</code> file is your compiled program. To run the
+program:</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">$</span> ./a.out</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Hello world!</code></pre>
+</div>
+<p>You have compiled your first Fortran program! The first episode in
+this lesson will cover compiling in more detail.</p>
 </div>
 </section><section><h2 class="section-heading" id="text-editors-and-integrated-development-environments-ides">Text Editors and Integrated Development Environments (IDEs)<a class="anchor" aria-label="anchor" href="#text-editors-and-integrated-development-environments-ides"></a></h2>
 <hr class="half-width"><p>Fortran files are plain text and can be edited with any plain text
@@ -412,13 +621,13 @@ will not be picked up in this mode. Files can be manually set to
 extensions can be added to your <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html" class="external-link">Emacs
 initialization file</a> so they are recognised as Fortran when opened.
 To add this to your initialisation file:</p>
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">LISP<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode lisp" tabindex="0"><code class="sourceCode commonlisp"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>(<span class="kw">setq</span> auto-mode-alist</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>      (<span class="kw">append</span> '((<span class="st">"</span><span class="sc">\\</span><span class="st">.mf90"</span> . f90-mode)</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>                (<span class="st">"</span><span class="sc">\\</span><span class="st">.X90"</span> . f90-mode)</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>        ) auto-mode-alist))</span></code></pre>
+<pre class="sourceCode lisp" tabindex="0"><code class="sourceCode commonlisp"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>(<span class="kw">setq</span> auto-mode-alist</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>      (<span class="kw">append</span> '((<span class="st">"</span><span class="sc">\\</span><span class="st">.mf90"</span> . f90-mode)</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>                (<span class="st">"</span><span class="sc">\\</span><span class="st">.X90"</span> . f90-mode)</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>        ) auto-mode-alist))</span></code></pre>
 </div>
 <div class="tabs">
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
@@ -439,16 +648,16 @@ To add this to your initialisation file:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
 <p>From your home directory, initialization settings are placed in your
 <code>.emacs.d/init.el</code> file.</p>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
 <p>Initialization settings are placed in your
 <code>~/.config/emacs/init.el</code> file. This location follows the
 Linux desktop environment guidelines.</p>
 </div>
-<div id="nav-tabpanel-1-3" class="tab-pane" aria-labelledby="nav-tab-1-3" role="tabpanel">
+<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
 <p>The <code>.emacs</code> or <code>.emacs.el</code> file is an older
 method of configuring Emacs. This file is stored in your home
 directory.</p>
@@ -494,34 +703,34 @@ extension.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-1" class="tab-pane show active" aria-labelledby="nav-tab-2-1" role="tabpanel">
-<div class="codewrapper sourceCode" id="cb3">
+<div id="nav-tabpanel-2-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-1">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> pip install fortls</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> pip install fortls</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-2" class="tab-pane" aria-labelledby="nav-tab-2-2" role="tabpanel">
-<div class="codewrapper sourceCode" id="cb4">
+<div id="nav-tabpanel-2-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-2">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> conda install <span class="at">-c</span> conda-forge fortls</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">$</span> conda install <span class="at">-c</span> conda-forge fortls</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-3" class="tab-pane" aria-labelledby="nav-tab-2-3" role="tabpanel">
-<div class="codewrapper sourceCode" id="cb5">
+<div id="nav-tabpanel-2-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-3">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> brew install fortls</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">$</span> brew install fortls</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-4" class="tab-pane" aria-labelledby="nav-tab-2-4" role="tabpanel">
+<div id="nav-tabpanel-2-4" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-4">
 <p>The development version of <code>fortls</code> can be installed from
 GitHub:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">$</span> pip install <span class="at">--user</span> <span class="at">--upgrade</span> git+git://github.com/fortran-lang/fortls</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> pip install <span class="at">--user</span> <span class="at">--upgrade</span> git+git://github.com/fortran-lang/fortls</span></code></pre>
 </div>
 </div>
 </div>
@@ -542,13 +751,13 @@ Open User Settings (JSON)”</li>
 editor.</li>
 <li>Add the <code>editor.rulers</code> property to the JSON file,
 e.g.</li>
-</ol><div class="codewrapper sourceCode" id="cb7">
+</ol><div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">JSON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode json" tabindex="0"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>    <span class="er">other.settings</span><span class="fu">:</span> <span class="st">"already here"</span><span class="fu">,</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>    <span class="er">editor.rulers</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">80</span><span class="ot">]</span></span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="fu">}</span></span></code></pre>
+<pre class="sourceCode json" tabindex="0"><code class="sourceCode json"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>    <span class="er">other.settings</span><span class="fu">:</span> <span class="st">"already here"</span><span class="fu">,</span></span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a>    <span class="er">editor.rulers</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">80</span><span class="ot">]</span></span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="fu">}</span></span></code></pre>
 </div>
 <p>Save the file. You should see a vertical line appear in your
 editor.</p>
@@ -607,8 +816,8 @@ any links that you are not going to use.
   "url": "https://astroDimitrios.github.io/intro-to-modern-fortran/index.html",
   "identifier": "https://astroDimitrios.github.io/intro-to-modern-fortran/index.html",
   "dateCreated": "2023-08-04",
-  "dateModified": "2025-03-21",
-  "datePublished": "2025-03-21"
+  "dateModified": "2025-03-24",
+  "datePublished": "2025-03-24"
 }
 
   </script><script>
