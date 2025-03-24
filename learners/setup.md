@@ -97,7 +97,7 @@ Comprehensive installation instructions are on the
 You can also install GFortran via [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html):
 
 ```bash
-$ conda install gfortran
+$ conda install conda-forge::gfortran
 ```
 
 ### Intel
