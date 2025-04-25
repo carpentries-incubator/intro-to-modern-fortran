@@ -61,8 +61,12 @@ contact: 'd.theodorakis@metoffice.gov.uk'
 # Order of episodes in your lesson
 episodes:
 - 01-trivial-program.md
-- introduction.Rmd
-- 02-basics.Rmd
+# - introduction.Rmd
+# - 02-basics.Rmd
+- 02-basics-variables.md
+- 02-basics-maths.md
+- 02-basics-logic.md
+- 02-basics-strings.md
 
 # Information for Learners
 learners:
@@ -77,3 +81,9 @@ profiles:
 #
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
+<<<<<<< HEAD
+=======
+sandpaper: astroDimitrios/sandpaper
+pegboard: astroDimitrios/pegboard
+varnish: astroDimitrios/varnish
+>>>>>>> eabc28b (Further split up the basics section - adds in the section on Maths)

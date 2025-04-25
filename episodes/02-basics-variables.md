@@ -22,11 +22,13 @@ Fortran is a ***strongly typed*** language.
 Each variable must be declared with a type.[^static]
 Fortran provides the following intrinsic (built-in) data types for variables:
 
-- `integer`
-- `real`
-- `complex`
-- `logical`
-- `character`
+- `integer`: A whole number which is positive, negative or zero.
+- `real`: A real number includes the fractional part,
+  even if the fractional part is 0.
+- `complex`: A number made up of a real and an imaginary part.
+- `logical`: A boolean value which can be **.true.** or **.false.**.
+- `character`: A single ASCII character.
+  Strings are made from sequences of characters.
 
 Variable names must be 63 characters or less (F2003 standard).
 No spaces are allowed.
@@ -35,6 +37,11 @@ No spaces are allowed.
 Names must begin with a letter.
 This also applies to names for programs, modules, subroutines,
 and functions, which you will learn about later in the course.
+
+Do **not** use Fortran keywords as variable names.
+Fortran will let you overwrite these keywords if you're not careful.
+The [Fortran wiki keywords page](https://fortranwiki.org/fortran/show/Keywords)
+contains a list of all Fortran keywords.
 
 [^static]: Fortran is also ***statically typed***.
            You can not change a variables type after the variable declaration.
@@ -54,6 +61,8 @@ integer :: number_of_pelicans
 ```
 
 :::: challenge
+
+## Create a `variables` program
 
 1. Create a new Fortran program named `variables.f90`.
 2. Declare 5 variables. One of each of the 5 intrinsic data types.
@@ -176,6 +185,8 @@ Characters (strings) such as `pelican_tag` can be surrounded
 by single or double quotes.
 
 :::: challenge
+
+## Modify your `variables` program
 
 1. Assign values to the variables in your program.
 2. Compile and run your program.
@@ -333,6 +344,8 @@ character, parameter :: pelican_tag = 'J'
 
 :::: challenge
 
+## Add a parameter to your `variables` program
+
 1. Modify a variable in your code to be a parameter.
 2. Try modifying the parameter in your code.
    What output do you get when compiling?
@@ -397,6 +410,8 @@ This will aid your debugging and help make your code more portable.
 ::::
 
 :::: challenge
+
+## Tidy up your program
 
 1. Make sure your code conforms to the style
 followed by this course.
