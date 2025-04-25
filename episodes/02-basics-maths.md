@@ -500,6 +500,8 @@ by being consistent with your precision.
 
 :::: challenge
 
+## Remove Casting
+
 1. Find your compiler documentation.
    Is there a flag that warns you about implicit conversions / kind casting?
    If there is, compile your program with the flag.
