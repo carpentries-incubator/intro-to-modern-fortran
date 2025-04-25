@@ -16,7 +16,7 @@ program lennard_jones_potential
       !! van der Waals radius Angstroms
     integer(kind=i_64) :: lj_potential_const = 4_i_64
       !! unit-less Lennard-Jones Potential constant
-    
+
     real(kind=r_64) :: separation_distance
       !! separation distance r in Angstroms
     real(kind=r_64) :: lj_potential
