@@ -60,7 +60,6 @@ contact: 'd.theodorakis@metoffice.gov.uk'
 
 # Order of episodes in your lesson
 episodes: 
-- 01-trivial-program.md
 - 02-variables.md
 - 03-maths.md
 - 04-logic.md
