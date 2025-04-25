@@ -27,6 +27,12 @@ depending on your compiler and optimisations.
 To provide a good starting point for this episode
 complete the challenge below.
 
+For this episode complete challenges in:
+
+```bash
+cd ~/Desktop/intro-to-modern-fortran/03-maths
+```
+
 :::: challenge
 
 ## Create a `maths` Fortran program

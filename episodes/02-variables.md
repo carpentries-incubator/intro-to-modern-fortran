@@ -60,6 +60,12 @@ So to declare an integer:
 integer :: number_of_pelicans
 ```
 
+For this episode complete challenges in:
+
+```bash
+cd ~/Desktop/intro-to-modern-fortran/02-variables
+```
+
 :::: challenge
 
 ## Create a `variables` program
