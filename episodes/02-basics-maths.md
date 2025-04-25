@@ -325,26 +325,27 @@ How has the output changed?
 
 ::: solution
 
-```fortran
+<pre class="fortran">
+<code>
 program maths
     !! Test program to demonstrate Fortran arithmetic
 
-    use, intrinsic :: iso_fortran_env, only: r_64 => real64
+    <mark>use, intrinsic :: iso_fortran_env, only: r_64 => real64</mark>
 
     implicit none
 
-    real(kind=r_64), parameter :: pi = 3.141592654_r_64
+    <mark>real(kind=r_64)</mark>, parameter :: pi = 3.141592654_r_64
       !! Value of pi
-    
-    real(kind=r_64) :: radius
+
+    <mark>real(kind=r_64)</mark> :: radius
       !! Radius of the circle in cm
-    real(kind=r_64) :: area
+    <mark>real(kind=r_64)</mark> :: area
       !! Area of the circle in cm
 
     ! this float must be written as 5.0 (sometimes seen as 5.)
     ! not 5 on its own without the decimal point
     radius = 5.0_r_64  ! cm
-    area = pi * radius**2.0_r_64
+    area = pi * radius**2
 
     print *, 'Pi = ', pi
     print *, 'Radius = ', radius, ' cm'
@@ -352,7 +353,8 @@ program maths
 
 end program maths
 
-```
+</code>
+</pre>
 
 Example output before (32 bit single precision):
 
@@ -517,11 +519,12 @@ by being consistent with your precision.
 
 2. Example modified code with no kind casting:
 
-```fortran
+<pre class="fortran">
+<code>
 program lennard_jones_potential
     !! Calculates the Lennard-Jones Potential for 2 Xenon atoms
 
-    use, intrinsic :: iso_fortran_env, only: r_64 => real64
+    <mark>use, intrinsic :: iso_fortran_env, only: r_64 => real64</mark>
 
     implicit none
 
@@ -529,9 +532,9 @@ program lennard_jones_potential
       !! well depth kJ/mol
     real(kind=r_64), parameter :: sigma = 3.40_r_64     ! Angstroms
       !! van der Waals radius Angstroms
-    real(kind=r_64), parameter :: lj_potential_const = 4_r_64
+    <mark>real(kind=r_64), parameter :: lj_potential_const = 4_r_64</mark>
       !! unit-less Lennard-Jones Potential constant
-    
+
     real(kind=r_64) :: separation_distance
       !! separation distance r in Angstroms
     real(kind=r_64) :: lj_potential
@@ -549,7 +552,8 @@ program lennard_jones_potential
 
 end program lennard_jones_potential
 
-```
+</code>
+</pre>
 
 The exponents in the equation `12` and `6`
 have been left as integers.
