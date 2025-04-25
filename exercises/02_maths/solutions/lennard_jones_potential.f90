@@ -6,15 +6,15 @@
 program lennard_jones_potential
     !! Calculates the Lennard-Jones Potential for 2 Xenon atoms
 
-    use, intrinsic :: iso_fortran_env, only: i_64 => int64, r_64 => real64
+    use, intrinsic :: iso_fortran_env, only: r_64 => real64
 
     implicit none
 
-    real(kind=r_64),    parameter :: epsilon = 0.997_r_64  ! kJ/mol
+    real(kind=r_64), parameter :: epsilon = 0.997_r_64  ! kJ/mol
       !! well depth kJ/mol
-    real(kind=r_64),    parameter :: sigma = 3.40_r_64     ! Angstroms
+    real(kind=r_64), parameter :: sigma = 3.40_r_64     ! Angstroms
       !! van der Waals radius Angstroms
-    integer(kind=i_64) :: lj_potential_const = 4_i_64
+    real(kind=r_64), parameter :: lj_potential_const = 4.0_r_64
       !! unit-less Lennard-Jones Potential constant
 
     real(kind=r_64) :: separation_distance
