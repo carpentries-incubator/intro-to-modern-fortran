@@ -565,6 +565,16 @@ is faster than using a real exponent.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Th
+- Operators in order of precedance: `**`, `*`, `/`, `+`, and `-`.
+- List of [intrinsic maths functions](https://fortran-lang.org/learn/intrinsics/math/).
+- A numeric variables **kind** specifies its floating-point precision.
+  32-bit, 64-bit etc.
+- Always specify a kind when defining and assigning values to variables.
+  Otherwise Fortran will default to the compilers single precision.
+- Avoid mixing precision and kinds
+  (e.g. integers with reals, or 32-bit with 64-bit).
+  The compiler will implicitly convert the lower precision value
+  to a higher precision value.
+  This can slow down your programs.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
