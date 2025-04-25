@@ -46,10 +46,14 @@ and extract the contents in your Desktop.
 This file contains template code and data for some exercises.
 It also contains solutions for all exercises.
 
+The following code with create the correct directories
+and download and extract the tar file:
+
 ```bash
 $ mkdir ~/Desktop/intro-to-modern-fortran
 $ cd ~/Desktop/intro-to-modern-fortran
-$ tar -xzf ~/Downloads/exercises.tar.gz --strip-components=1
+$ curl -sSLO https://www.astropython.com/intro-to-modern-fortran/data/exercises.tar.gz
+$ tar -xzf ./exercises.tar.gz --strip-components=1
 ```
 
 ::: spoiler
