@@ -60,12 +60,11 @@ contact: 'd.theodorakis@metoffice.gov.uk'
 
 # Order of episodes in your lesson
 episodes: 
-# - introduction.Rmd
-# - 02-basics.Rmd
-- 02-basics-variables.md
-- 02-basics-maths.md
-- 02-basics-logic.md
-- 02-basics-strings.md
+- 01-trivial-program.md
+- 02-variables.md
+- 03-maths.md
+- 04-logic.md
+- 05-strings.md
 
 # Information for Learners
 learners: 
