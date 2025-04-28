@@ -398,12 +398,15 @@ feature is not used often in modern code.</p>
 <hr class="half-width"><p>Download the <a href="../data/exercises.tar.gz">tar file</a> and extract
 the contents in your Desktop. This file contains template code and data
 for some exercises. It also contains solutions for all exercises.</p>
+<p>The following code with create the correct directories and download
+and extract the tar file:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> mkdir ~/Desktop/intro-to-modern-fortran</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> cd ~/Desktop/intro-to-modern-fortran</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">$</span> tar <span class="at">-xzf</span> ~/Downloads/exercises.tar.gz <span class="at">--strip-components</span><span class="op">=</span>1</span></code></pre>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">$</span> curl <span class="at">-sSLO</span> https://www.astropython.com/intro-to-modern-fortran/data/exercises.tar.gz</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="ex">$</span> tar <span class="at">-xzf</span> ./exercises.tar.gz <span class="at">--strip-components</span><span class="op">=</span>1</span></code></pre>
 </div>
 <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
@@ -830,8 +833,8 @@ any links that you are not going to use.
   "url": "https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/index.html",
   "identifier": "https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/index.html",
   "dateCreated": "2023-08-04",
-  "dateModified": "2025-04-22",
-  "datePublished": "2025-04-22"
+  "dateModified": "2025-04-28",
+  "datePublished": "2025-04-28"
 }
 
   </script><script>
