@@ -250,7 +250,7 @@ These parameters are then used when declaring variables:
 
 ```fortran
 real(kind=r_32), parameter :: earth_radius = 6371_r_32  ! km
-real(kind=r_64)            :: current_distance_from_sun ! Au 
+real(kind=r_64)            :: current_distance_from_sun ! AU
 ```
 
 and when assigning values to variables:
@@ -271,7 +271,7 @@ The default precision for reals is single.
 ```fortran
 use, intrinsic :: iso_fortran_env, only: r_64 => real64
 
-real(kind=r_64) :: current_distance_from_sun ! Au 
+real(kind=r_64) :: current_distance_from_sun ! AU
 
 current_distance_from_sun = 1.3       ! no kind suffix - this is single precision
 current_distance_from_sun = 1.3_r_64  ! double precision
