@@ -22,8 +22,8 @@ program variables
       !! Pelican pod tracking tag
 
     number_of_pelicans          = 5
-    pelican_weight              = 2.5          ! kg
-    pelican_population_dynamics = (-1.2, 0.9)  ! births, deaths per year
+    pelican_weight              = 2.5              ! kg
+    pelican_population_dynamics = (-1.2e3, 0.9e2)  ! births, deaths per year
     is_young_pelican            = .false.
 
     print *, number_of_pelicans
