@@ -227,14 +227,14 @@ use, intrinsic :: iso_fortran_env, only: r_32 => real32, r_64 => real64
 These parameters are then used when declaring variables:
 
 ```fortran
-real(kind=r_32), parameter :: earth_radius = 6371_r_32  ! km - single precision
-real(kind=r_64)            :: current_distance_from_sun ! Au - double precision
+real(kind=r_32), parameter :: earth_radius = 6371_r_32   ! km - single precision
+real(kind=r_64)            :: current_distance_from_sun  ! AU - double precision
 ```
 
 and when assigning values to variables:
 
 ```fortran
-current_distance_from_sun = 1.3_r_64
+current_distance_from_sun = 1.3_r_64  ! AU
 ```
 
 ### Using intrinsic functions
