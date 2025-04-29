@@ -494,8 +494,8 @@ To remove this implicit casting we can:
   real(kind=r_64), parameter :: lj_potential_const = 4.0_r_64
   ```
 
-This program uses mixed kinds in its arithmetic.
-Some programs have mixed precision as well.
+This program uses mixed type in its arithmetic (reals and integers).
+Some programs have mixed precision (kinds) as well.
 i.e. 32 bit integers in an equation with 64 bit integers.
 In this case the 32 bit integers are promoted to 64 bit
 by the compiler before use.
@@ -511,7 +511,7 @@ by being consistent with your precision.
    If there is, compile your program with the flag.
    What warning do you get?
 2. Modify your solution to the last challenge to remove
-   any kind casting.
+   any type/kind casting.
 
 ::: solution
 
@@ -523,7 +523,29 @@ by being consistent with your precision.
    $ gfortran -o ljp lennard_jones_potential.f90 -Wconversion -Wconversion-extra
    ```
 
-2. Example modified code with no kind casting:
+   Note that in the solution code to the last challenge
+   gfortran will still **not** provide a warning.
+   The parameter was declared as an integer
+   and used in arithmetic with reals (mixed type).
+   So why is there no warning about conversion?
+
+   Because the variable is a parameter the compiler is performing
+   optimisations under the hood that remove the type casting.
+   Remove the parameter keyword and the following warning appears:
+
+   ```output
+   lennard_jones_potential.f90:24:35:
+
+       24 |   lj_potential = lj_potential_const * epsilon * &
+          |                                   1
+   Warning: Conversion from INTEGER(8) to REAL(8) at (1) [-Wconversion-extra]
+   ```
+
+   So turning on compiler warnings can be useful
+   but are no substitute for thorough code and science review.
+   A later episode goes deeper into compiler usage and debugging.
+
+2. Example modified code with no type/kind casting:
 
 ```fortran
 program lennard_jones_potential
