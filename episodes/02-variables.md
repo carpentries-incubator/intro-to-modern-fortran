@@ -181,7 +181,7 @@ For example:
 ```fortran
 number_of_pelicans          = 5
 pelican_weight              = 2.5  ! kg
-pelican_population_dynamics = (-1.2, 0.9)
+pelican_population_dynamics = (-1.2e3, 0.9e2) ! Scientific notation, -1,200 etc
 is_young_pelican            = .false.
 pelican_tag                 = 'Jeff'
 ```
@@ -212,7 +212,7 @@ program variables
 
     number_of_pelicans          = 5
     pelican_weight              = 2.5  ! kg
-    pelican_population_dynamics = (-1.2, 0.9)
+    pelican_population_dynamics = (-1.2e3, 0.9e2)
     is_young_pelican            = .false.
     pelican_tag                 = 'J'
 
@@ -315,7 +315,7 @@ program variables
 
     number_of_pelicans          = 5
     pelican_weight              = 2.5  ! kg
-    pelican_population_dynamics = (-1.2, 0.9)
+    pelican_population_dynamics = (-1.2e3, 0.9e2)
     is_young_pelican            = .false.
     pelican_tag                 = 'J'
 
@@ -372,7 +372,7 @@ program variables
 
     number_of_pelicans          = 5
     pelican_weight              = 2.5  ! kg
-    pelican_population_dynamics = (-1.2, 0.9)
+    pelican_population_dynamics = (-1.2e3, 0.9e2)
     is_young_pelican            = .false.
     ! pelican_tag               = 'J'
 
@@ -446,8 +446,8 @@ program variables
       !! Pelican pod tracking tag
 
     number_of_pelicans          = 5
-    pelican_weight              = 2.5          ! kg
-    pelican_population_dynamics = (-1.2, 0.9)  ! births, deaths per year
+    pelican_weight              = 2.5              ! kg
+    pelican_population_dynamics = (-1.2e3, 0.9e2)  ! births, deaths per year
     is_young_pelican            = .false.
 
     print *, number_of_pelicans
