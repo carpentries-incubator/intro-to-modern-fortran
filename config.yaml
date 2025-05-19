@@ -60,8 +60,10 @@ contact: 'd.theodorakis@metoffice.gov.uk'
 
 # Order of episodes in your lesson
 episodes: 
-- introduction.Rmd
-- 02-basics.Rmd
+- 02-variables.md
+- 03-maths.md
+- 04-logic.md
+- 05-strings.md
 
 # Information for Learners
 learners: 
@@ -79,5 +81,3 @@ profiles:
 sandpaper: astroDimitrios/sandpaper
 pegboard: astroDimitrios/pegboard
 varnish: astroDimitrios/varnish
-
-
