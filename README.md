@@ -26,4 +26,7 @@ General Notes:
 tar czf episodes/data/exercises.tar.gz exercises/
 ```
 
+- Ensure new exercises and exercise updates are also updated
+  in the corresponding `exercises/<episode_name>/README.md`
+
 [Notes from RSECon23](https://pad.archer2.ac.uk/p/rsecon23-fortran)
