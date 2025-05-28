@@ -80,7 +80,7 @@ statement to all `programs`
 Now all variable names must be declared explicitly before they are referenced.
 
 The only executable line in this program is the `print` statement.
-We will cover IO (Input/Output) in a later episode.
+We will cover I/O (Input/Output) in a later episode.
 For now, know that `print *,` will print what follows
 to standard output when the program runs.
 In this case, it will print the string `Hello world!` to our terminal.
