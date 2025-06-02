@@ -63,7 +63,7 @@ Some legacy codes may not have labels.
 
 Some variables in Fortran have a default type.
 Variables with names beginning with letters `i-n`
-are implicitly of type `integer`
+are implicitly of type `integer`.
 Anything else is of type `real`.
 
 **This is very bad practice and modern Fortran should not be used in this way.**
