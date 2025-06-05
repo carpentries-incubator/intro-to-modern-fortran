@@ -265,6 +265,9 @@ Find the correct flags to:
 
 ## Solution
 
+The links below may not match your compiler version.
+With any documentation make sure it's for your compiler version.
+
 - [GNU gfortran command options](https://gcc.gnu.org/onlinedocs/gcc-4.3.6/gfortran/Invoking-GNU-Fortran.html#Invoking-GNU-Fortran)
 - [Intel ifx docs](https://www.intel.com/content/www/us/en/docs/fortran-compiler/developer-guide-reference/2025-0/overview.html)
 - [LLVM Flang command line reference](https://flang.llvm.org/docs/FlangCommandLineReference.html)
