@@ -93,12 +93,29 @@ We recommend installing **GFortran** as your first compiler.
 
 ### GFortran
 
-GFortran is a free open source compiler.
+GFortran is a free open-source compiler.
 It is part of the Gnu Compiler Collection (GCC).
 Comprehensive installation instructions are on the
 [GFortran install page on fortran-lang][install-gfortran].
 
-You can also install GFortran via [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html):
+Check whether you already have GFortran installed:
+
+```bash 
+gfortran --version
+```
+
+If GFortran is installed, this should print a few lines related to GFortran's version number and license.
+If there is instead a "Command not found" message, install GFortran via your system's package manager, for example 
+
+```bash
+sudo apt install gfortran
+```
+
+on Debian-based systems.  See [the website][install-gfortran] for instructions for other operating systems.
+Note that this requires root access.  
+
+Without root access, 
+you can also install GFortran locally with [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html):
 
 ```bash
 $ conda install conda-forge::gfortran
