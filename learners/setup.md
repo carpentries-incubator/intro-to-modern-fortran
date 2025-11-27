@@ -93,12 +93,29 @@ We recommend installing **GFortran** as your first compiler.
 
 ### GFortran
 
-GFortran is a free open source compiler.
+GFortran is a free open-source compiler.
 It is part of the Gnu Compiler Collection (GCC).
 Comprehensive installation instructions are on the
 [GFortran install page on fortran-lang][install-gfortran].
 
-You can also install GFortran via [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html):
+Check whether you already have GFortran installed:
+
+```bash 
+gfortran --version
+```
+
+If GFortran is installed, this should print a few lines related to GFortran's version number and license.
+If there is instead a "Command not found" message, install GFortran via your system's package manager, for example 
+
+```bash
+sudo apt install gfortran
+```
+
+on Debian-based systems.  See [the website][install-gfortran] for instructions for other operating systems.
+Note that this requires root access.  
+
+Without root access, 
+you can also install GFortran locally with [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html):
 
 ```bash
 $ conda install conda-forge::gfortran
@@ -227,6 +244,7 @@ Setup instructions for some editors are available below.
 Editor Setup Quick Links:
 
 - [Emacs](#emacs)
+- [Vim](#vim)
 - [VS Code](#vs-code)
 
 ### Emacs
@@ -266,6 +284,25 @@ The `.emacs` or `.emacs.el` file is an older method of configuring Emacs.
 This file is stored in your home directory.
 
 :::::::::::::::::::::::::
+
+### Vim
+[Vim](vim-link) is a text editor.  Fortran syntax highlighting and indenting is present by default.  
+
+Since fortran is case-insensitive, set vim's search to `ic` (ignore case) by adding to `~/.vimrc`
+```
+set ic
+set incsearch
+```
+
+To set vim to remember what line we were on when opening files, add the following to `~/.vimrc`: 
+```
+" Remember cursor position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif
+endif
+```
+
+
 
 ### VS Code
 
