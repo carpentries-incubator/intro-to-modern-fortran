@@ -287,9 +287,9 @@ This file is stored in your home directory.
 
 ### Vim
 
-[Vim](vim-link) is powerful customizable command-line text editor.  Fortran syntax highlighting and indenting are present by default.
+[Vim][vim-link] is powerful customizable command-line text editor.  Fortran syntax highlighting and indenting are present by default.
 
-To add additional Fortran features including syntax checking, linting, and keyboard shortcuts, install vim plugin [vimf90](vimf90-link)
+To add additional Fortran features including syntax checking, linting, and keyboard shortcuts, install vim plugin [vimf90][vimf90-link]
 by following the instructions for Vundle or another vim plugin manager.
 
 ### VS Code
