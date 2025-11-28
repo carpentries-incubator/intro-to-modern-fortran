@@ -23,5 +23,8 @@ any links that you are not going to use.
 [emacs-link]: https://www.gnu.org/software/emacs/
 [emacs-init-link]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html
 
+[vim-link]: https://www.vim.org/
+[vimf09-link]: https://rudrab.github.io/vimf90/
+
 [vscode-link]: https://code.visualstudio.com
 [vscode-modern-fortran]: https://marketplace.visualstudio.com/items?itemName=fortran-lang.linter-gfortran
