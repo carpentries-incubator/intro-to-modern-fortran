@@ -100,7 +100,7 @@ Comprehensive installation instructions are on the
 
 Check whether GFortran is already installed:
 
-```bash 
+```bash
 $ gfortran --version
 ```
 
@@ -112,9 +112,9 @@ For example on Debian or Ubuntu (note that this requires root access):
 $ sudo apt install gfortran
 ```
 
-See [the website][install-gfortran] for instructions for other operating systems. 
+See [the website][install-gfortran] for instructions for other operating systems.
 
-Without root access, 
+Without root access,
 you can install GFortran locally with [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html):
 
 ```bash
@@ -244,6 +244,7 @@ Setup instructions for some editors are available below.
 Editor Setup Quick Links:
 
 - [Emacs](#emacs)
+- [Vim](#vim)
 - [VS Code](#vs-code)
 
 ### Emacs
@@ -283,6 +284,25 @@ The `.emacs` or `.emacs.el` file is an older method of configuring Emacs.
 This file is stored in your home directory.
 
 :::::::::::::::::::::::::
+
+### Vim
+[Vim](vim-link) is a text editor.  Fortran syntax highlighting and indenting is present by default.
+
+Since fortran is case-insensitive, set vim's search to `ic` (ignore case) by adding to `~/.vimrc`
+```
+set ic
+set incsearch
+```
+
+To set vim to remember what line we were on when opening files, add the following to `~/.vimrc`:
+```
+" Remember cursor position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif
+endif
+```
+
+
 
 ### VS Code
 
