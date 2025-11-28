@@ -286,23 +286,11 @@ This file is stored in your home directory.
 :::::::::::::::::::::::::
 
 ### Vim
-[Vim](vim-link) is a text editor.  Fortran syntax highlighting and indenting is present by default.
 
-Since fortran is case-insensitive, set vim's search to `ic` (ignore case) by adding to `~/.vimrc`
-```
-set ic
-set incsearch
-```
+[Vim](vim-link) is powerful customizable command-line text editor.  Fortran syntax highlighting and indenting are present by default.
 
-To set vim to remember what line we were on when opening files, add the following to `~/.vimrc`:
-```
-" Remember cursor position
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif
-endif
-```
-
-
+To add additional Fortran features including syntax checking, linting, and keyboard shortcuts, install vim plugin [vimf90](vimf90-link)
+by following the instructions for Vundle or another vim plugin manager.
 
 ### VS Code
 
