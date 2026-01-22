@@ -98,24 +98,25 @@ It is part of the Gnu Compiler Collection (GCC).
 Comprehensive installation instructions are on the
 [GFortran install page on fortran-lang][install-gfortran].
 
-Check whether you already have GFortran installed:
+Check whether GFortran is already installed:
 
 ```bash 
-gfortran --version
+$ gfortran --version
 ```
 
-If GFortran is installed, this should print a few lines related to GFortran's version number and license.
-If there is instead a "Command not found" message, install GFortran via your system's package manager, for example 
+If GFortran is installed, this should print GFortran's version number and license.
+If you get the `Command not found` message, install GFortran via your system's package manager.
+For example:
 
 ```bash
-sudo apt install gfortran
+$ sudo apt install gfortran
 ```
 
 on Debian-based systems.  See [the website][install-gfortran] for instructions for other operating systems.
 Note that this requires root access.  
 
 Without root access, 
-you can also install GFortran locally with [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html):
+you can install GFortran locally with [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html):
 
 ```bash
 $ conda install conda-forge::gfortran
