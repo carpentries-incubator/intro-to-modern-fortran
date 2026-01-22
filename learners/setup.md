@@ -106,14 +106,13 @@ $ gfortran --version
 
 If GFortran is installed, this should print GFortran's version number and license.
 If you get the `Command not found` message, install GFortran via your system's package manager.
-For example on Debian-based systems:
+For example on Debian-based systems (note that this requires root access):
 
 ```bash
 $ sudo apt install gfortran
 ```
 
-See [the website][install-gfortran] for instructions for other operating systems.
-Note that this requires root access.  
+See [the website][install-gfortran] for instructions for other operating systems. 
 
 Without root access, 
 you can install GFortran locally with [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html):
