@@ -75,7 +75,3 @@ profiles:
 #
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
-sandpaper: astroDimitrios/sandpaper
-pegboard: astroDimitrios/pegboard
-varnish: astroDimitrios/varnish
-
