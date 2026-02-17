@@ -457,7 +457,7 @@ installing <strong>GFortran</strong> as your first compiler.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-GFortran" class="tab-pane show active" aria-labelledby="nav-tab-1-GFortran" role="tabpanel">
+<div id="nav-tabpanel-1-GFortran" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-GFortran">
 <p>GFortran is a free open-source compiler. It is part of the Gnu
 Compiler Collection (GCC). Comprehensive installation instructions are
 on the <a href="https://fortran-lang.org/learn/os_setup/install_gfortran/" class="external-link">GFortran
@@ -486,7 +486,7 @@ website</a> for instructions for other operating systems.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> conda install conda-forge::gfortran</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-Intel" class="tab-pane" aria-labelledby="nav-tab-1-Intel" role="tabpanel">
+<div id="nav-tabpanel-1-Intel" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Intel">
 <p>The Intel Fortran compiler is free through their oneAPI toolkit. You
 can download only the compiler or the oneAPI Fortran Essentials
 toolkit.</p>
@@ -498,14 +498,14 @@ oneAPI Fortran Essentials Install Instructions</a></li>
 oneAPI Fortran Essentials Install Instructions</a></li>
 </ul><p>Note: The Intel compiler is not available for macOS.</p>
 </div>
-<div id="nav-tabpanel-1-Flang" class="tab-pane" aria-labelledby="nav-tab-1-Flang" role="tabpanel">
+<div id="nav-tabpanel-1-Flang" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Flang">
 <p>LLVM Flang is another open source compiler based on the LLVM compiler
 toolkit. Flang is installed from the LLVM source code. If you have not
 built programs from source before we recommended choosing another
 compiler or installing Flang via conda. <a href="https://flang.llvm.org/docs/GettingStarted.html" class="external-link">Link to the Flang
 Getting Started page</a></p>
 </div>
-<div id="nav-tabpanel-1-Cray" class="tab-pane" aria-labelledby="nav-tab-1-Cray" role="tabpanel">
+<div id="nav-tabpanel-1-Cray" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Cray">
 <p>The <a href="https://cpe.ext.hpe.com/docs/latest/cce/index.html" class="external-link">HPE
 Cray Fortran compiler</a> is proprietary but highly optimised. Your
 organisation may have a license for the Cray compiler.</p>
@@ -567,28 +567,28 @@ Fortran program:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-GFortran" class="tab-pane show active" aria-labelledby="nav-tab-2-GFortran" role="tabpanel">
+<div id="nav-tabpanel-2-GFortran" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-GFortran">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">$</span> gfortran hello_world.f90</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-Intel" class="tab-pane" aria-labelledby="nav-tab-2-Intel" role="tabpanel">
+<div id="nav-tabpanel-2-Intel" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Intel">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">$</span> ifx hello_world.f90</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-Flang" class="tab-pane" aria-labelledby="nav-tab-2-Flang" role="tabpanel">
+<div id="nav-tabpanel-2-Flang" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Flang">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">$</span> flang hello_world.f90</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-Cray" class="tab-pane" aria-labelledby="nav-tab-2-Cray" role="tabpanel">
+<div id="nav-tabpanel-2-Cray" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Cray">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -630,6 +630,7 @@ editor. We recommend you use an editor that is capable of
 some editors are available below.</p>
 <p>Editor Setup Quick Links:</p>
 <ul><li><a href="#emacs">Emacs</a></li>
+<li><a href="#vim">Vim</a></li>
 <li><a href="#vs-code">VS Code</a></li>
 </ul><div class="section level3">
 <h3 id="emacs">Emacs<a class="anchor" aria-label="anchor" href="#emacs"></a></h3>
@@ -672,22 +673,31 @@ To add this to your initialisation file:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
 <p>From your home directory, initialization settings are placed in your
 <code>.emacs.d/init.el</code> file.</p>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
 <p>Initialization settings are placed in your
 <code>~/.config/emacs/init.el</code> file. This location follows the
 Linux desktop environment guidelines.</p>
 </div>
-<div id="nav-tabpanel-1-3" class="tab-pane" aria-labelledby="nav-tab-1-3" role="tabpanel">
+<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
 <p>The <code>.emacs</code> or <code>.emacs.el</code> file is an older
 method of configuring Emacs. This file is stored in your home
 directory.</p>
 </div>
 </div>
 </div>
+</div>
+<div class="section level3">
+<h3 id="vim">Vim<a class="anchor" aria-label="anchor" href="#vim"></a></h3>
+<p><a href="https://www.vim.org/" class="external-link">Vim</a> is powerful customizable
+command-line text editor. Fortran syntax highlighting and indenting are
+present by default.</p>
+<p>To add additional Fortran features including syntax checking,
+linting, and keyboard shortcuts, install the Vim plugin <a href="https://rudrab.github.io/vimf90/" class="external-link">vimf90</a> by following the
+instructions for Vundle or another Vim plugin manager.</p>
 </div>
 <div class="section level3">
 <h3 id="vs-code">VS Code<a class="anchor" aria-label="anchor" href="#vs-code"></a></h3>
@@ -727,28 +737,28 @@ extension.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-1" class="tab-pane show active" aria-labelledby="nav-tab-2-1" role="tabpanel">
+<div id="nav-tabpanel-2-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-1">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">$</span> pip install fortls</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-2" class="tab-pane" aria-labelledby="nav-tab-2-2" role="tabpanel">
+<div id="nav-tabpanel-2-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-2">
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> conda install <span class="at">-c</span> conda-forge fortls</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-3" class="tab-pane" aria-labelledby="nav-tab-2-3" role="tabpanel">
+<div id="nav-tabpanel-2-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-3">
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="ex">$</span> brew install fortls</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-4" class="tab-pane" aria-labelledby="nav-tab-2-4" role="tabpanel">
+<div id="nav-tabpanel-2-4" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-4">
 <p>The development version of <code>fortls</code> can be installed from
 GitHub:</p>
 <div class="codewrapper sourceCode" id="cb21">
