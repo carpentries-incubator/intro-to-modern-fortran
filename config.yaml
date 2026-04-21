@@ -60,7 +60,7 @@ contact: 'd.theodorakis@metoffice.gov.uk'
 
 # Order of episodes in your lesson
 episodes: 
-- introduction.Rmd
+- 01-trivial-program.md
 
 # Information for Learners
 learners: 
