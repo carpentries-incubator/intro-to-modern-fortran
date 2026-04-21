@@ -28,7 +28,7 @@ During the setup you compiled a simple `hello world` program.
 Let's look at that program in more detail:
 
 ```bash
-cd ~/Desktop/intro-to-modern-fortran/01-trivial-program
+cd ~/Desktop/intro-to-modern-fortran/exercises/01-trivial-program
 cat hello_world.f90
 ```
 
