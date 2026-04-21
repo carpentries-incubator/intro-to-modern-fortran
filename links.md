@@ -18,8 +18,13 @@ any links that you are not going to use.
 
 [this-course-link]: https://carpentries-incubator.github.io/intro-to-modern-fortran/
 
+[install-gfortran]: https://fortran-lang.org/learn/os_setup/install_gfortran/
+
 [emacs-link]: https://www.gnu.org/software/emacs/
 [emacs-init-link]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html
+
+[vim-link]: https://www.vim.org/
+[vimf90-link]: https://rudrab.github.io/vimf90/
 
 [vscode-link]: https://code.visualstudio.com
 [vscode-modern-fortran]: https://marketplace.visualstudio.com/items?itemName=fortran-lang.linter-gfortran
