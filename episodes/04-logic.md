@@ -24,16 +24,18 @@ Fortran's `logical` type has two values:
   logical :: use_stochastic_physics = .true.
 ```
 
-### Logical operators
+## Logical operators
 
-Values can be tested logical operators `.or.`, `.and.` and `.not.` are available, and 
-these can be used to set the value of logical variables. 
+Fortran logical expressions use its logical operators:
 
-The precedence is illustrated by, e.g.,
-```fortran
-  q = i .or. j .and. .not. k    ! evaluated as i .or. (j .and. (.not. k))
-```
-where q, i, j, and k are all logical variables.
+|      Operator       |      Alternative       |      Description                                                    |
+|---------------------|------------------------|---------------------------------------------------------------------|
+|     ==              |     .eq.               |     Tests for equality of two operands                              |
+|     /=              |     .ne.               |     Test for inequality of two operands                             |
+|     >               |     .gt.               |     Tests if left operand is strictly greater than right operand    |
+|     <               |     .lt.               |     Tests if left operand is strictly less than right operand       |
+|     >=              |     .ge.               |     Tests if left operand is greater than or equal to right operand |
+|     <=              |     .le.               |     Tests if left operand is less than or equal to right operand    |
 
 Use brackets to avoid confusion over operator precedence.
 
@@ -43,25 +45,30 @@ To form logical expressions from numeric or other expressions, we require
 relational operators. The are two forms in Fortran, illustrated in the table
 below. It is recommended that you avoid the older form.
 
-| Relation                 | Operator | Older form | For              |
-|--------------------------|----------|------------|------------------|
-| Less than                | `< `     | `.lt.`     | `integer` `real` |
-| Less than or equal to    | `<=`     | `.le.`     | `integer` `real` |
-| Greater than             | `> `     | `.gt.`     | `integer` `real` |
-| Greater than or equal to | `>=`     | `.ge.`     | `integer` `real` |
-| Equal to                 | `==`     | `.eq.`     | `integer` `real` `complex`|
-| Not equal to             | `/=`     | `.neq.`    | `integer` `real` `complex`|
+| Relation                 | Operator | Older form | For                         |
+|--------------------------|----------|------------|-----------------------------|
+| Less than                | `<`      | `.lt.`     | `integer`, `real`           |
+| Less than or equal to    | `<=`     | `.le.`     | `integer`, `real`           |
+| Greater than             | `>`      | `.gt.`     | `integer`, `real`           |
+| Greater than or equal to | `>=`     | `.ge.`     | `integer`, `real`           |
+| Equal to                 | `==`     | `.eq.`     | `integer`, `real`, `complex`|
+| Not equal to             | `/=`     | `.neq.`    | `integer`, `real`, `complex`|
 
 ### Logical equivalence
 
 Equivalence between two logical expressions or variables is established
-via the logical operators `.eqv.` and `.neqv.`. 
+via the logical operators `.eqv.` and `.neqv.`.
 
-While some some compilers may allow the use of `==`, this should be avoided.
+While some some compilers may allow the use of `==`
+to compare logical expressions,
+this should be avoided.
 
 ### Using logical operators
 
-These operators can be used to check and set the values of logical variables, dependent on other variables, e.g.
+These operators can be used to check
+and set the values of logical variables,
+dependent on other variables, e.g.
+
 ```fortran
 program example4
    implicit none
@@ -86,9 +93,11 @@ program example4
 
 end program example4
 ```
+
 Compiling and running this code will give the following output
-```
-$  ./a.out 
+
+```output
+$  ./a.out
  F
  T
  T

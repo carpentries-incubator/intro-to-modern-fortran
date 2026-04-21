@@ -18,8 +18,9 @@ exercises: 15
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 Variables store information we can use in our programs.
-Fortran is a ***strongly typed*** language.
-Each variable must be declared with a type.[^static]
+Fortran is a ***strongly and statically typed*** language.
+Each variable must be declared with a type.
+You can not change a variables type after the variable declaration.
 Fortran provides the following intrinsic (built-in) data types for variables:
 
 - `integer`: A whole number which is positive, negative or zero.
@@ -43,9 +44,6 @@ Fortran will let you overwrite these keywords if you're not careful.
 The [Fortran wiki keywords page](https://fortranwiki.org/fortran/show/Keywords)
 contains a list of all Fortran keywords.
 
-[^static]: Fortran is also ***statically typed***.
-           You can not change a variables type after the variable declaration.
-
 ## Declaring Variables
 
 Fortran variables are declared with this syntax:
@@ -63,7 +61,7 @@ integer :: number_of_pelicans
 For this episode complete challenges in:
 
 ```bash
-cd ~/Desktop/intro-to-modern-fortran/02-variables
+cd ~/Desktop/intro-to-modern-fortran/exercises/02-variables
 ```
 
 :::: challenge
@@ -136,7 +134,7 @@ The output below is from the GNU gfortran compiled executable:
 
 ```output
   -922534656
-   0.00000000    
+   0.00000000
         (2.063298560E+11,0.00000000)
  T
 ```
@@ -262,7 +260,7 @@ Example output:
 
 ```output
            5
-   2.50000000    
+   2.50000000
            (-1.20000005,0.899999976)
  F
  J
@@ -281,7 +279,7 @@ Example output:
 
 :::
 
-::: caution
+::: callout
 
 ### Assignment on declaration
 
@@ -337,7 +335,7 @@ This will now give the output:
 
 ```output
  J
- F   
+ F
 ```
 
 However, you can also define constant values that cannot change.
@@ -367,7 +365,7 @@ program variables
     real    :: pelican_weight
     complex :: pelican_population_dynamics
     logical :: is_young_pelican
-    
+
     character, parameter :: pelican_tag = 'J'
 
     number_of_pelicans          = 5
@@ -420,7 +418,7 @@ This will aid your debugging and help make your code more portable.
 ## Tidy up your program
 
 1. Make sure your code conforms to the style
-followed by this course.
+followed by the examples above.
 2. Add Ford comments to document the program
 and each variable.
 

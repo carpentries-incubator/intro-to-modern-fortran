@@ -30,7 +30,7 @@ complete the challenge below.
 For this episode complete challenges in:
 
 ```bash
-cd ~/Desktop/intro-to-modern-fortran/03-maths
+cd ~/Desktop/intro-to-modern-fortran/exercises/03-maths
 ```
 
 :::: challenge
@@ -142,14 +142,14 @@ program maths
 
     real, parameter :: pi = 3.141592654
       !! Value of pi
-    
+
     real :: radius
       !! Radius of the circle in cm
     real :: area
       !! Area of the circle in cm
 
     radius = 5.0  ! cm
-    area = pi * radius**2 
+    area = pi * radius**2
 
     print *, 'Pi = ', pi
     print *, 'Radius = ', radius, ' cm'
@@ -194,7 +194,7 @@ ftn -o maths maths.f90
 Example output:
 
 ```output
- Pi =    3.14159274    
+ Pi =    3.14159274
  Radius =    5.00000000      cm
  Area =    78.5398178      cm^2
 ```
@@ -221,42 +221,42 @@ It was introduced in the F2008 standard.
 ```fortran
 ! This goes after the program statement
 ! We will cover modules in a later episode
-use, intrinsic :: iso_fortran_env, only: r_32 => real32, r_64 => real64
+use, intrinsic :: iso_fortran_env, only: real32, real64
 ```
 
 These parameters are then used when declaring variables:
 
 ```fortran
-real(kind=r_32), parameter :: earth_radius = 6371_r_32   ! km - single precision
-real(kind=r_64)            :: current_distance_from_sun  ! AU - double precision
+real(kind=real32), parameter :: earth_radius = 6371_real32  ! km - single precision
+real(kind=real64)            :: current_distance_from_sun   ! AU - double precision
 ```
 
 and when assigning values to variables:
 
 ```fortran
-current_distance_from_sun = 1.3_r_64  ! AU
+current_distance_from_sun = 1.3_real64  ! AU
 ```
 
 ### Using intrinsic functions
 
 ```fortran
 ! hardware specific 32 bit real
-integer, parameter :: r_32 = selected_real_kind(6, 37)
+integer, parameter :: real32 = selected_real_kind(6, 37)
 ! hardware specific 64 bit real
-integer, parameter :: r_64 = selected_real_kind(15, 307)
+integer, parameter :: real64 = selected_real_kind(15, 307)
 ```
 
 These parameters are then used when declaring variables:
 
 ```fortran
-real(kind=r_32), parameter :: earth_radius = 6371_r_32  ! km
-real(kind=r_64)            :: current_distance_from_sun ! AU
+real(kind=real32), parameter :: earth_radius = 6371_real32  ! km
+real(kind=real64)            :: current_distance_from_sun   ! AU
 ```
 
 and when assigning values to variables:
 
 ```fortran
-current_distance_from_sun = 1.3_r_64
+current_distance_from_sun = 1.3_real64
 ```
 
 :::
@@ -269,12 +269,12 @@ Fortran differs from other languages.
 The default precision for reals is single.
 
 ```fortran
-use, intrinsic :: iso_fortran_env, only: r_64 => real64
+use, intrinsic :: iso_fortran_env, only: real64
 
-real(kind=r_64) :: current_distance_from_sun ! AU
+real(kind=real64) :: current_distance_from_sun ! AU
 
-current_distance_from_sun = 1.3       ! no kind suffix - this is single precision
-current_distance_from_sun = 1.3_r_64  ! double precision
+current_distance_from_sun = 1.3         ! no kind suffix - this is single precision
+current_distance_from_sun = 1.3_real64  ! double precision
 ```
 
 **Always** use a kind suffix for real and integer types.
@@ -288,12 +288,12 @@ current_distance_from_sun = 1.3_r_64  ! double precision
 You can omit the `kind=`:
 
 ```fortran
-real(kind=r_64)
+real(kind=real64)
 ! is the same as
-real(r_64)
+real(real64)
 ```
 
-In this lesson we prefer explicitly stating `kind=`.
+In this lesson we will explicitly state `kind=` for clarity.
 
 :::
 
@@ -335,21 +335,21 @@ How has the output changed?
 program maths
     !! Test program to demonstrate Fortran arithmetic
 
-    use, intrinsic :: iso_fortran_env, only: r_64 => real64
+    use, intrinsic :: iso_fortran_env, only: real64
 
     implicit none
 
-    real(kind=r_64), parameter :: pi = 3.141592654_r_64
+    real(kind=real64), parameter :: pi = 3.141592654_real64
       !! Value of pi
 
-    real(kind=r_64) :: radius
+    real(kind=real64) :: radius
       !! Radius of the circle in cm
-    real(kind=r_64) :: area
+    real(kind=real64) :: area
       !! Area of the circle in cm
 
     ! this float must be written as 5.0 (sometimes seen as 5.)
     ! not 5 on its own without the decimal point
-    radius = 5.0_r_64  ! cm
+    radius = 5.0_real64  ! cm
     area = pi * radius**2
 
     print *, 'Pi = ', pi
@@ -363,7 +363,7 @@ end program maths
 Example output before (32 bit single precision):
 
 ```output
-Pi =    3.14159274    
+Pi =    3.14159274
 Radius =    5.00000000      cm
 Area =    78.5398178      cm^2
 ```
@@ -371,7 +371,7 @@ Area =    78.5398178      cm^2
 Example output after (64 bit double precision):
 
 ```output
-Pi =    3.1415926540000001     
+Pi =    3.1415926540000001
 Radius =    5.0000000000000000       cm
 Area =    78.539816349999995       cm^2
 ```
@@ -410,23 +410,23 @@ In the file `lennard_jones_potential.f90`:
 program lennard_jones_potential
     !! Calculates the Lennard-Jones Potential for 2 Xenon atoms
 
-    use, intrinsic :: iso_fortran_env, only: i_64 => int64, r_64 => real64
+    use, intrinsic :: iso_fortran_env, only: int64, real64
 
     implicit none
 
-    real(kind=r_64),    parameter :: epsilon = 0.997_r_64  ! kJ/mol
+    real(kind=real64),   parameter :: epsilon = 0.997_real64  ! kJ/mol
       !! well depth kJ/mol
-    real(kind=r_64),    parameter :: sigma = 3.40_r_64     ! Angstroms
+    real(kind=real64),   parameter :: sigma = 3.40_real64     ! Angstroms
       !! van der Waals radius Angstroms
-    integer(kind=i_64), parameter :: lj_potential_const = 4_i_64
+    integer(kind=int64), parameter :: lj_potential_const = 4_int64
       !! unit-less Lennard-Jones Potential constant
-    
-    real(kind=r_64) :: separation_distance
+
+    real(kind=real64) :: separation_distance
       !! separation distance r in Angstroms
-    real(kind=r_64) :: lj_potential
+    real(kind=real64) :: lj_potential
       !! Lennard-Jones Potential kJ/mol
 
-    separation_distance = 4.0_r_64  ! Angstroms
+    separation_distance = 4.0_real64  ! Angstroms
 
     ! Calculate the Lennard-Jones Potential using:
     ! V(r) = 4*epsilon*[(sigma/r)**12 - (sigma/r)**6]
@@ -483,7 +483,7 @@ To remove this implicit casting we can:
   the calculation.
 
   ```fortran
-  lj_potential_const_real = real(lj_potential_const, r_64)
+  lj_potential_const_real = real(lj_potential_const, real64)
   ```
 
   We would also have to define the new real variable `lj_potential_const_real`.
@@ -491,7 +491,7 @@ To remove this implicit casting we can:
   This is the simplest solution which avoids casting.
 
   ```fortran
-  real(kind=r_64), parameter :: lj_potential_const = 4.0_r_64
+  real(kind=real64), parameter :: lj_potential_const = 4.0_real64
   ```
 
 This program uses mixed type in its arithmetic (reals and integers).
@@ -551,23 +551,23 @@ by being consistent with your precision.
 program lennard_jones_potential
     !! Calculates the Lennard-Jones Potential for 2 Xenon atoms
 
-    use, intrinsic :: iso_fortran_env, only: r_64 => real64
+    use, intrinsic :: iso_fortran_env, only: real64
 
     implicit none
 
-    real(kind=r_64), parameter :: epsilon = 0.997_r_64  ! kJ/mol
+    real(kind=real64), parameter :: epsilon = 0.997_real64  ! kJ/mol
       !! well depth kJ/mol
-    real(kind=r_64), parameter :: sigma = 3.40_r_64     ! Angstroms
+    real(kind=real64), parameter :: sigma = 3.40_real64     ! Angstroms
       !! van der Waals radius Angstroms
-    real(kind=r_64), parameter :: lj_potential_const = 4_r_64
+    real(kind=real64), parameter :: lj_potential_const = 4_real64
       !! unit-less Lennard-Jones Potential constant
 
-    real(kind=r_64) :: separation_distance
+    real(kind=real64) :: separation_distance
       !! separation distance r in Angstroms
-    real(kind=r_64) :: lj_potential
+    real(kind=real64) :: lj_potential
       !! Lennard-Jones Potential kJ/mol
 
-    separation_distance = 4.0_r_64  ! Angstroms
+    separation_distance = 4.0_real64  ! Angstroms
 
     ! Calculate the Lennard-Jones Potential using:
     ! V(r) = 4*epsilon*[(sigma/r)**12 - (sigma/r)**6]

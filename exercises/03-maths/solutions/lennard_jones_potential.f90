@@ -6,23 +6,23 @@
 program lennard_jones_potential
     !! Calculates the Lennard-Jones Potential for 2 Xenon atoms
 
-    use, intrinsic :: iso_fortran_env, only: r_64 => real64
+    use, intrinsic :: iso_fortran_env, only: real64
 
     implicit none
 
-    real(kind=r_64), parameter :: epsilon = 0.997_r_64  ! kJ/mol
+    real(kind=real64), parameter :: epsilon = 0.997_real64  ! kJ/mol
       !! well depth kJ/mol
-    real(kind=r_64), parameter :: sigma = 3.40_r_64     ! Angstroms
+    real(kind=real64), parameter :: sigma = 3.40_real64     ! Angstroms
       !! van der Waals radius Angstroms
-    real(kind=r_64), parameter :: lj_potential_const = 4.0_r_64
+    real(kind=real64), parameter :: lj_potential_const = 4.0_real64
       !! unit-less Lennard-Jones Potential constant
 
-    real(kind=r_64) :: separation_distance
+    real(kind=real64) :: separation_distance
       !! separation distance r in Angstroms
-    real(kind=r_64) :: lj_potential
+    real(kind=real64) :: lj_potential
       !! Lennard-Jones Potential kJ/mol
 
-    separation_distance = 4.0_r_64  ! Angstroms
+    separation_distance = 4.0_real64  ! Angstroms
 
     ! Calculate the Lennard-Jones Potential using:
     ! V(r) = 4*epsilon*[(sigma/r)**12 - (sigma/r)**6]

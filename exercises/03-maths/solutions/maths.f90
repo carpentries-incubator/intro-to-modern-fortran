@@ -6,19 +6,19 @@
 program maths
     !! Test program to demonstrate Fortran arithmetic
 
-    use, intrinsic :: iso_fortran_env, only: r_64 => real64
+    use, intrinsic :: iso_fortran_env, only: real64
 
     implicit none
 
-    real(kind=r_64), parameter :: pi = 3.141592654_r_64
+    real(kind=real64), parameter :: pi = 3.141592654_real64
       !! Value of pi
 
-    real(kind=r_64) :: radius
+    real(kind=real64) :: radius
       !! Radius of the circle in cm
-    real(kind=r_64) :: area
+    real(kind=real64) :: area
       !! Area of the circle in cm
 
-    radius = 5.0_r_64  ! cm
+    radius = 5.0_real64  ! cm
     area = pi * radius**2
 
     print *, 'Pi = ', pi
