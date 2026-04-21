@@ -154,7 +154,8 @@ Those comments provide licensing and authorship information.
 
 ## Compiling
 
-Fortran is a compiled language (like C++).
+Fortran is a [compiled language](../learners/reference.md#compiled-language)
+(like C++).
 A compiler turns human-readable source code into machine code.
 This machine code can then be executed by the computer.
 Languages like Python are interpreted.
