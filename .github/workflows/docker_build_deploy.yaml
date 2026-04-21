@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'l10n_main'
     paths-ignore:
       - '.github/workflows/**.yaml'
       - '.github/workbench-docker-version.txt'
@@ -60,7 +61,7 @@ jobs:
 
       - name: "Checkout Lesson"
         if: steps.build-check.outputs.do-build == 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: "Get container version info"
         id: wb-vers
@@ -98,7 +99,7 @@ jobs:
         - ${{ github.workspace }}:/home/rstudio/lesson
       options: --cpus 1
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: "Debugging Info"
         run: |
@@ -132,6 +133,7 @@ jobs:
         with:
           reset: ${{ vars.BUILD_RESET || github.event.inputs.reset || 'false' }}
           skip-manage-deps: ${{ github.event.inputs.force-skip-manage-deps == 'true' || steps.build-container-deps.outputs.renv-cache-available || steps.build-container-deps.outputs.backup-cache-used || 'false' }}
+          lang-code: ${{ vars.LANG_CODE || '' }}
 
   update-container-version:
     name: "Update container version used"
