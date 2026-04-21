@@ -54,4 +54,8 @@ renv/sandbox # OPTIONAL
 
 # Editors
 .vscode
-renv/sandbox
+
+# Executables
+a.out
+exercises/*/solutions/*
+!exercises/*/solutions/*.*

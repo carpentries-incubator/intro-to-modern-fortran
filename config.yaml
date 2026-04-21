@@ -59,19 +59,29 @@ contact: 'd.theodorakis@metoffice.gov.uk'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
+episodes:
 - 01-trivial-program.md
+- 02-variables.md
+- 03-maths.md
+- 04-logic.md
+- 05-strings.md
 
 # Information for Learners
-learners: 
+learners:
 
 # Information for Instructors
-instructors: 
+instructors:
 
 # Learner Profiles
-profiles: 
+profiles:
 
 # Customisation ---------------------------------------------
 #
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
+<<<<<<< HEAD
+=======
+sandpaper: astroDimitrios/sandpaper
+pegboard: astroDimitrios/pegboard
+varnish: astroDimitrios/varnish
+>>>>>>> eabc28b (Further split up the basics section - adds in the section on Maths)
