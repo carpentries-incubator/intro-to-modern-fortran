@@ -200,7 +200,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Introduction</a>
+        <a href="01-trivial-program.html">1. A Trivial Program</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -248,11 +248,11 @@
         <!-- START: inst/pkgdown/templates/content-syllabus.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link float-end" href="../instructor/introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/01-trivial-program.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="../instructor/introduction.html" rel="next">Next: Introduction... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/01-trivial-program.html" rel="next">Next: A Trivial Program... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Schedule</h1>
       
@@ -330,13 +330,15 @@ Shell lesson material: <a href="https://swcarpentry.github.io/shell-novice/" cla
 <span class="visually-hidden">Duration: </span>00h 00m
 </td>
 <td>
- 1. <a href="introduction.html">Introduction</a>
+ 1. <a href="01-trivial-program.html">A Trivial Program</a>
 </td>
 <td>
-What is Fortran?
+How do you write programs in Fortran?<br>How do you compile the Fortran
+code to make an executable?<br>How do we run that executable and see
+any output?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 20m
+<span class="visually-hidden">Duration: </span>00h 10m
 </td>
 <td>
 Finish
@@ -397,7 +399,7 @@ and extract the tar file:</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">$</span> mkdir ~/Desktop/intro-to-modern-fortran</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="ex">$</span> cd ~/Desktop/intro-to-modern-fortran</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="ex">$</span> curl <span class="at">-sSLO</span> https://www.astropython.com/intro-to-modern-fortran/data/exercises.tar.gz</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="ex">$</span> tar <span class="at">-xzf</span> ./exercises.tar.gz <span class="at">--strip-components</span><span class="op">=</span>1</span></code></pre>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="ex">$</span> tar <span class="at">-xzf</span> ./exercises.tar.gz</span></code></pre>
 </div>
 <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
@@ -417,9 +419,8 @@ this lessons GitHub repository:</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">$</span> cd ~/Desktop</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="ex">$</span> git clone git@github.com:carpentries-incubator/intro-to-modern-fortran.git</span></code></pre>
 </div>
-<p>The <a href="https://github.com/carpentries-incubator/intro-to-modern-fortran/blob/main/exercises.tar.gz" class="external-link">tar
-file</a> is in the root directory. Alternatively the exercises are in
-the top level <code>exercises/</code> directory.</p>
+<p>The exercises are in the top level <code>exercises/</code>
+directory.</p>
 </div>
 </div>
 </div>
@@ -459,7 +460,7 @@ installing <strong>GFortran</strong> as your first compiler.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-GFortran" class="tab-pane show active" aria-labelledby="nav-tab-1-GFortran" role="tabpanel">
+<div id="nav-tabpanel-1-GFortran" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-GFortran">
 <p>GFortran is a free open-source compiler. It is part of the Gnu
 Compiler Collection (GCC). Comprehensive installation instructions are
 on the <a href="https://fortran-lang.org/learn/os_setup/install_gfortran/" class="external-link">GFortran
@@ -488,7 +489,7 @@ website</a> for instructions for other operating systems.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="ex">$</span> conda install conda-forge::gfortran</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-Intel" class="tab-pane" aria-labelledby="nav-tab-1-Intel" role="tabpanel">
+<div id="nav-tabpanel-1-Intel" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Intel">
 <p>The Intel Fortran compiler is free through their oneAPI toolkit. You
 can download only the compiler or the oneAPI Fortran Essentials
 toolkit.</p>
@@ -500,14 +501,14 @@ oneAPI Fortran Essentials Install Instructions</a></li>
 oneAPI Fortran Essentials Install Instructions</a></li>
 </ul><p>Note: The Intel compiler is not available for macOS.</p>
 </div>
-<div id="nav-tabpanel-1-Flang" class="tab-pane" aria-labelledby="nav-tab-1-Flang" role="tabpanel">
+<div id="nav-tabpanel-1-Flang" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Flang">
 <p>LLVM Flang is another open source compiler based on the LLVM compiler
 toolkit. Flang is installed from the LLVM source code. If you have not
 built programs from source before we recommended choosing another
 compiler or installing Flang via conda. <a href="https://flang.llvm.org/docs/GettingStarted.html" class="external-link">Link to the Flang
 Getting Started page</a></p>
 </div>
-<div id="nav-tabpanel-1-Cray" class="tab-pane" aria-labelledby="nav-tab-1-Cray" role="tabpanel">
+<div id="nav-tabpanel-1-Cray" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Cray">
 <p>The <a href="https://cpe.ext.hpe.com/docs/latest/cce/index.html" class="external-link">HPE
 Cray Fortran compiler</a> is proprietary but highly optimised. Your
 organisation may have a license for the Cray compiler.</p>
@@ -569,28 +570,28 @@ Fortran program:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-GFortran" class="tab-pane show active" aria-labelledby="nav-tab-2-GFortran" role="tabpanel">
+<div id="nav-tabpanel-2-GFortran" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-GFortran">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="ex">$</span> gfortran hello_world.f90</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-Intel" class="tab-pane" aria-labelledby="nav-tab-2-Intel" role="tabpanel">
+<div id="nav-tabpanel-2-Intel" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Intel">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="ex">$</span> ifx hello_world.f90</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-Flang" class="tab-pane" aria-labelledby="nav-tab-2-Flang" role="tabpanel">
+<div id="nav-tabpanel-2-Flang" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Flang">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="ex">$</span> flang hello_world.f90</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-Cray" class="tab-pane" aria-labelledby="nav-tab-2-Cray" role="tabpanel">
+<div id="nav-tabpanel-2-Cray" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Cray">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -675,16 +676,16 @@ To add this to your initialisation file:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
 <p>From your home directory, initialization settings are placed in your
 <code>.emacs.d/init.el</code> file.</p>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
 <p>Initialization settings are placed in your
 <code>~/.config/emacs/init.el</code> file. This location follows the
 Linux desktop environment guidelines.</p>
 </div>
-<div id="nav-tabpanel-1-3" class="tab-pane" aria-labelledby="nav-tab-1-3" role="tabpanel">
+<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
 <p>The <code>.emacs</code> or <code>.emacs.el</code> file is an older
 method of configuring Emacs. This file is stored in your home
 directory.</p>
@@ -739,28 +740,28 @@ extension.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-1" class="tab-pane show active" aria-labelledby="nav-tab-2-1" role="tabpanel">
+<div id="nav-tabpanel-2-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-1">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="ex">$</span> pip install fortls</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-2" class="tab-pane" aria-labelledby="nav-tab-2-2" role="tabpanel">
+<div id="nav-tabpanel-2-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-2">
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="ex">$</span> conda install <span class="at">-c</span> conda-forge fortls</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-3" class="tab-pane" aria-labelledby="nav-tab-2-3" role="tabpanel">
+<div id="nav-tabpanel-2-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-3">
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="ex">$</span> brew install fortls</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-4" class="tab-pane" aria-labelledby="nav-tab-2-4" role="tabpanel">
+<div id="nav-tabpanel-2-4" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-4">
 <p>The development version of <code>fortls</code> can be installed from
 GitHub:</p>
 <div class="codewrapper sourceCode" id="cb21">
@@ -935,11 +936,11 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link float-end" href="../instructor/introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/01-trivial-program.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="../instructor/introduction.html" rel="next">Next: Introduction... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/01-trivial-program.html" rel="next">Next: A Trivial Program... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
     </nav></div>
 <!-- END  : inst/pkgdown/templates/content-syllabus.html -->

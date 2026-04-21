@@ -237,7 +237,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Introduction</a>
+        <a href="01-trivial-program.html">1. A Trivial Program</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -300,13 +300,19 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Key Points</h1>
         
-<section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction</a></h2>
+<section id="01-trivial-program"><h2 class="section-heading"><a href="01-trivial-program.html">A Trivial Program</a></h2>
 <hr class="half-width">
 <ul>
-<li>A Fortran program is made up of one or more <em>statements</em>
-which are separated by line breaks</li>
-<li>Comments are declared with an <code>!</code> and may trail other
-statements</li>
+<li>Fortran programs start with the <code>program &lt;label&gt;</code>
+statement.</li>
+<li>Fortran programs end with the <code>end program &lt;label&gt;</code>
+statement.</li>
+<li>Always use <code>implicit none</code> to prevent implicit typing for
+variables.</li>
+<li>Fortran comments start with <code>!</code>.</li>
+<li>The <code>-o</code> flag specifies the name of the compiled
+executable:
+<code>&lt;compiler_command&gt; -o &lt;executable_name&gt; &lt;source_file.f90&gt;</code>.</li>
 </ul></section>
 </div>
     </main>

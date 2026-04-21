@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/01-trivial-program.html</loc>
+  </url>
+  <url>
     <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/404.html</loc>
   </url>
   <url>
@@ -17,6 +20,9 @@
   </url>
   <url>
     <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/index.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/01-trivial-program.html</loc>
   </url>
   <url>
     <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/404.html</loc>
