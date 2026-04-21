@@ -53,7 +53,7 @@ and download and extract the tar file:
 $ mkdir ~/Desktop/intro-to-modern-fortran
 $ cd ~/Desktop/intro-to-modern-fortran
 $ curl -sSLO https://www.astropython.com/intro-to-modern-fortran/data/exercises.tar.gz
-$ tar -xzf ./exercises.tar.gz --strip-components=1
+$ tar -xzf ./exercises.tar.gz
 ```
 
 ::: spoiler
@@ -68,8 +68,7 @@ $ cd ~/Desktop
 $ git clone git@github.com:carpentries-incubator/intro-to-modern-fortran.git
 ```
 
-The [tar file](https://github.com/carpentries-incubator/intro-to-modern-fortran/blob/main/exercises.tar.gz) is in the root directory.
-Alternatively the exercises are in the top level `exercises/` directory.
+The exercises are in the top level `exercises/` directory.
 
 :::
 
