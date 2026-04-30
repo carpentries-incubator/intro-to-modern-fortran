@@ -48,6 +48,26 @@ It also defines the program name, `hello_world`.
 It is matched by the `end` statement (`end program hello_world`).
 The `end` statement is always the last statement in a program.
 
+
+
+```{r, echo=FALSE, results="asis"}
+program <- "program hello_world
+    !! A simple hello world program
+
+    implicit none  ! prevent implicit typing (to integers) of variables
+                   ! whose name starts with the letters i-n
+
+    print *, 'Hello world!'
+
+end program hello_world"
+cat("```fortran\n")
+cat("\n")
+cat(program)
+cat("\n")
+cat("```\n")
+cat(paste0("[Link to run the program](https://dev.lfortran.org/?code=", utils::URLencode(program), ")"))
+```
+
 ::: spoiler
 
 ### Style Guide - Labels
@@ -121,6 +141,7 @@ Think about where the best place for these comments are.
 
 ## Solution
 
+
 ```fortran
 program hello_world
     !! A simple hello world program
@@ -133,6 +154,7 @@ program hello_world
 end program hello_world
 
 ```
+
 
 1. We have placed a comment describing the program under the `program` statement.
    You might also see program descriptions before the `program` statement.
