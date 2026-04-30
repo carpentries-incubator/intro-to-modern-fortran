@@ -59,17 +59,19 @@ contact: 'd.theodorakis@metoffice.gov.uk'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
+episodes:
 - 01-trivial-program.md
+- 02-variables.md
+- 03-maths.md
 
 # Information for Learners
-learners: 
+learners:
 
 # Information for Instructors
-instructors: 
+instructors:
 
 # Learner Profiles
-profiles: 
+profiles:
 
 # Customisation ---------------------------------------------
 #
