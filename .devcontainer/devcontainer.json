@@ -1,6 +1,6 @@
 {
     "name": "fortran-unit-test",
-    "image": "ghcr.io/ucl-arc/fortran-unit-testing-exercises:main",
+    "image": "ghcr.io/carpentries-incubator/intro-to-modern-fortran:main",
     "customizations": {
       "vscode": {
         "extensions": [
