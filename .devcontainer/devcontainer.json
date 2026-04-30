@@ -1,0 +1,27 @@
+{
+    "name": "fortran-unit-test",
+    "image": "ghcr.io/ucl-arc/fortran-unit-testing-exercises:main",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-vscode.cpptools-extension-pack",
+          "ms-vscode.cpptools",
+          "bierner.markdown-checkbox",
+          "bierner.markdown-emoji",
+          "kejun.markdown-alert",
+          "bierner.markdown-preview-github-styles",
+          "fortran-lang.linter-gfortran",
+        ],
+        "commands": [
+          "workbench.action.terminal.new"
+        ],
+        "settings": {
+          "workbench.editorAssociations": {
+              "*.md": "vscode.markdown.preview.editor"
+          }
+        }
+      }
+    },
+    "remoteUser": "vscode",
+    "postCreateCommand": "code README.md"
+  }
