@@ -1,0 +1,14 @@
+# Extend the parent image
+FROM ghcr.io/carpentries-incubator/intro-to-modern-fortran:main
+
+# Copy in the relevant exercise
+COPY --chown=vscode exercises/01-trivial-program /home/vscode/01-trivial-program
+
+# Move into the new directory
+WORKDIR /home/vscode/01-trivial-program
+
+# Build exercise
+RUN gfortran hello_world.f90 -o hello_world
+
+# Run exercise
+RUN ./hello_world
