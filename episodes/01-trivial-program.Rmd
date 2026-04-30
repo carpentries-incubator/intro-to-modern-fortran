@@ -48,6 +48,14 @@ It also defines the program name, `hello_world`.
 It is matched by the `end` statement (`end program hello_world`).
 The `end` statement is always the last statement in a program.
 
+
+
+```{r, echo=FALSE, results="asis"}
+## up two directories because the R code is run from site/built
+source("../../episodes/files/utils.R")
+cat_program("../../exercises/01-trivial-program", "hello_world.f90")
+```
+
 ::: spoiler
 
 ### Style Guide - Labels
@@ -121,6 +129,7 @@ Think about where the best place for these comments are.
 
 ## Solution
 
+
 ```fortran
 program hello_world
     !! A simple hello world program
@@ -133,6 +142,7 @@ program hello_world
 end program hello_world
 
 ```
+
 
 1. We have placed a comment describing the program under the `program` statement.
    You might also see program descriptions before the `program` statement.

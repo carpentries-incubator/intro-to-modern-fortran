@@ -59,8 +59,8 @@ contact: 'd.theodorakis@metoffice.gov.uk'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes:
-- 01-trivial-program.md
+episodes: 
+- 01-trivial-program.Rmd
 - 02-variables.md
 - 03-maths.md
 
