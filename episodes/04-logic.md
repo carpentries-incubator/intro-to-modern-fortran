@@ -6,14 +6,14 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::: questions
 
-- How do we declare and assign values to variables?
+- How do we declare and assign boolean values?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Understand the different intrinsic data types.
-- Declare and assign variables and parameters.
+- Declare and assign values to boolean variables.
+- Use logical operators in our code.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -41,9 +41,11 @@ Use brackets to avoid confusion over operator precedence.
 
 ### Relational operators
 
-To form logical expressions from numeric or other expressions, we require
-relational operators. The are two forms in Fortran, illustrated in the table
-below. It is recommended that you avoid the older form.
+To form logical expressions we use relational operators.
+The are two forms given in the table below.
+We recommend using the newer form,
+given in the second column,
+to improve the readability of your code.
 
 | Relation                 | Operator | Older form | For                         |
 |--------------------------|----------|------------|-----------------------------|
@@ -56,8 +58,8 @@ below. It is recommended that you avoid the older form.
 
 ### Logical equivalence
 
-Equivalence between two logical expressions or variables is established
-via the logical operators `.eqv.` and `.neqv.`.
+To test if logical expressions or variables are equivalent,
+we use the `.eqv.` and `.neqv.` operators.
 
 While some some compilers may allow the use of `==`
 to compare logical expressions,
