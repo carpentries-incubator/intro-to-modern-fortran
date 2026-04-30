@@ -130,6 +130,7 @@ Fortran also has a number of
 1. Add two new real variables for the `radius` and `area` to your program.
 2. Print the value of `radius` and `area`.
 3. Calculate the area of the circle using $\pi r^2$.
+   Give your answer in $cm^2$.
 4. Check your program compiles and runs.
 
 ::: solution
@@ -146,7 +147,7 @@ program maths
     real :: radius
       !! Radius of the circle in cm
     real :: area
-      !! Area of the circle in cm
+      !! Area of the circle in cm^2
 
     radius = 5.0  ! cm
     area = pi * radius**2
@@ -345,7 +346,7 @@ program maths
     real(kind=real64) :: radius
       !! Radius of the circle in cm
     real(kind=real64) :: area
-      !! Area of the circle in cm
+      !! Area of the circle in cm^2
 
     ! this float must be written as 5.0 (sometimes seen as 5.)
     ! not 5 on its own without the decimal point

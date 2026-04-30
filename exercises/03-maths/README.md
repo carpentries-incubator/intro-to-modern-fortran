@@ -12,6 +12,7 @@
 1. Add two new real variables for the `radius` and `area` to your program.
 2. Print the value of `radius` and `area`.
 3. Calculate the area of the circle using $\pi r^2$.
+   Give your answer in $cm^2$.
 4. Check your program compiles and runs.
 
 ## Specify the precision in your program

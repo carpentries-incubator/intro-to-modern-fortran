@@ -16,7 +16,7 @@ program maths
     real(kind=real64) :: radius
       !! Radius of the circle in cm
     real(kind=real64) :: area
-      !! Area of the circle in cm
+      !! Area of the circle in cm^2
 
     radius = 5.0_real64  ! cm
     area = pi * radius**2
