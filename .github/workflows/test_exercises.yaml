@@ -2,6 +2,7 @@
 name: "Run the docker tests for all the exercises"
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -33,5 +34,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
+      - name: Log in to ghcr.io
+        uses: redhat-actions/podman-login@4934294ad0449894bcd1e9f191899d7292469603 # v1
+        with:
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
+          registry: ghcr.io
+
       - name: Test episode 01
-        run: docker build . -f docker/Dockerfile.01
+        run: podman build . -f docker-tests/Dockerfile.01
