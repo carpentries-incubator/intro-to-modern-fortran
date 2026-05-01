@@ -42,4 +42,4 @@ jobs:
           registry: ghcr.io
 
       - name: Test episode 01
-        run: docker build . -f docker-tests/Dockerfile.01
+        run: podman build . -f docker-tests/Dockerfile.01
