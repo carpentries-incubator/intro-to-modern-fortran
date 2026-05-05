@@ -127,6 +127,7 @@
             More <i data-feather="chevron-down"></i>
           </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+<li><a class="dropdown-item" href="discuss.html">Discussion</a></li>
 <li><a class="dropdown-item" href="reference.html">Reference</a></li>
           </ul>
 </li>
@@ -246,6 +247,30 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="02-variables.html">2. Variables</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="03-maths.html">3. Maths</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -270,7 +295,8 @@
                       <li>
                         <a href="profiles.html">Learner Profiles</a>
                       </li>
-                      <li><a href="reference.html">Reference</a></li>
+                      <li><a href="discuss.html">Discussion</a></li>
+<li><a href="reference.html">Reference</a></li>
                     </ul>
 </div>
                 </div>
@@ -313,6 +339,38 @@ variables.</li>
 <li>The <code>-o</code> flag specifies the name of the compiled
 executable:
 <code>&lt;compiler_command&gt; -o &lt;executable_name&gt; &lt;source_file.f90&gt;</code>.</li>
+</ul></section><section id="02-variables"><h2 class="section-heading"><a href="02-variables.html">Variables</a></h2>
+<hr class="half-width">
+<ul>
+<li>There are 5 intrinsic data types for Fortran variables:
+<code>integer</code>, <code>real</code>, <code>complex</code>,
+<code>logical</code>, and <code>character</code>.</li>
+<li>Fortran variables are declared with the syntax:
+<code>&lt;variable_type&gt; :: &lt;variable_name&gt;</code>
+</li>
+<li>Assign a value to a variable with the syntax:
+<code>&lt;variable&gt; = &lt;value&gt;</code>
+</li>
+<li>Never assign a value on the same line as a variable is declared.
+This gives the variable the <code>save</code> attribute.</li>
+<li>Parameters are variables whose value can’t be changed:
+<code>&lt;variable_type&gt;, parameter :: &lt;variable_name&gt; = &lt;variable_value&gt;</code>.</li>
+</ul></section><section id="03-maths"><h2 class="section-heading"><a href="03-maths.html">Maths</a></h2>
+<hr class="half-width">
+<ul>
+<li>Operators in order of precedance: <code>**</code>, <code>*</code>,
+<code>/</code>, <code>+</code>, and <code>-</code>.</li>
+<li>List of <a href="https://fortran-lang.org/learn/intrinsics/math/" class="external-link">intrinsic maths
+functions</a>.</li>
+<li>A numeric variables <strong>kind</strong> specifies its
+floating-point precision. 32-bit, 64-bit etc.</li>
+<li>Always specify a kind when defining and assigning values to
+variables. Otherwise Fortran will default to the compilers single
+precision.</li>
+<li>Avoid mixing precision and kinds (e.g. integers with reals, or
+32-bit with 64-bit). The compiler will implicitly convert the lower
+precision value to a higher precision value. This can slow down your
+programs.</li>
 </ul></section>
 </div>
     </main>
@@ -363,8 +421,8 @@ executable:
   "url": "https://astroDimitrios.github.io/intro-to-modern-fortran/key-points.html",
   "identifier": "https://astroDimitrios.github.io/intro-to-modern-fortran/key-points.html",
   "dateCreated": "2023-08-04",
-  "dateModified": "2026-04-28",
-  "datePublished": "2026-04-28"
+  "dateModified": "2026-05-05",
+  "datePublished": "2026-05-05"
 }
 
   </script><script>

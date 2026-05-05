@@ -4,6 +4,12 @@
     <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/01-trivial-program.html</loc>
   </url>
   <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/02-variables.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/03-maths.html</loc>
+  </url>
+  <url>
     <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/404.html</loc>
   </url>
   <url>
@@ -16,6 +22,9 @@
     <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/aio.html</loc>
   </url>
   <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/discuss.html</loc>
+  </url>
+  <url>
     <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/images.html</loc>
   </url>
   <url>
@@ -23,6 +32,12 @@
   </url>
   <url>
     <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/01-trivial-program.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/02-variables.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/03-maths.html</loc>
   </url>
   <url>
     <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/404.html</loc>
@@ -35,6 +50,9 @@
   </url>
   <url>
     <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/discuss.html</loc>
   </url>
   <url>
     <loc>https://astroDimitrios.github.io/intro-to-modern-fortran/instructor/images.html</loc>
