@@ -40,5 +40,11 @@ jobs:
           password: ${{ github.token }}
           registry: ghcr.io
 
+      - name: Cache Podman images
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.local/share/containers
+          key: ${{ runner.os }}-podman-${{ hashFiles('docker-tests/*') }}
+
       - name: Test episode 01
-        run: docker build . -f docker-tests/Dockerfile.01
+        run: podman build . -f docker-tests/Dockerfile.01
