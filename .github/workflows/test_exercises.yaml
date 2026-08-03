@@ -41,10 +41,10 @@ jobs:
           registry: ghcr.io
       
       - name: Test exercise 01
-        run: podman build . -f docker/Dockerfile.01
+        run: podman build . -f docker-tests/Dockerfile.01
 
       - name: Test exercise 02
-        run: podman build . -f docker/Dockerfile.02
+        run: podman build . -f docker-tests/Dockerfile.02
 
       - name: Test exercise 03
-        run: podman build . -f docker/Dockerfile.03
+        run: podman build . -f docker-tests/Dockerfile.03
