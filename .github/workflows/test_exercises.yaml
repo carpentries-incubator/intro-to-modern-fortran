@@ -45,3 +45,6 @@ jobs:
 
       - name: Test exercise 02
         run: podman build . -f docker/Dockerfile.02
+
+      - name: Test exercise 03
+        run: podman build . -f docker/Dockerfile.03

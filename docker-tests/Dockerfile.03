@@ -1,0 +1,16 @@
+# Extend the parent image
+FROM ghcr.io/carpentries-incubator/intro-to-modern-fortran:main
+
+# Copy in the relevant exercise
+COPY --chown=vscode exercises/03-maths /home/vscode/03-maths
+
+# Move into the new directory
+WORKDIR /home/vscode/03-maths
+
+# Build exercises
+RUN gfortran solutions/lennard_jones_potential.f90 -o lennard_jones_potential
+RUN gfortran solutions/maths.f90 -o maths
+
+# Run exercises
+RUN ./lennard_jones_potential
+RUN ./maths
