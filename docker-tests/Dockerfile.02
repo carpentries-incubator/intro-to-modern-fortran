@@ -1,0 +1,14 @@
+# Extend the parent image
+FROM ghcr.io/carpentries-incubator/intro-to-modern-fortran:main
+
+# Copy in the relevant exercise
+COPY --chown=vscode exercises/02-variables /home/vscode/02-variables
+
+# Move into the new directory
+WORKDIR /home/vscode/02-variables
+
+# Build exercise
+RUN gfortran solutions/variables.f90 -o variables
+
+# Run exercise
+RUN ./variables
