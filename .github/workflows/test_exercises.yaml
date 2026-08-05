@@ -39,6 +39,12 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ github.token }}
           registry: ghcr.io
-
-      - name: Test episode 01
+      
+      - name: Test exercise 01
         run: podman build . -f docker-tests/Dockerfile.01
+
+      - name: Test exercise 02
+        run: podman build . -f docker-tests/Dockerfile.02
+
+      - name: Test exercise 03
+        run: podman build . -f docker-tests/Dockerfile.03
