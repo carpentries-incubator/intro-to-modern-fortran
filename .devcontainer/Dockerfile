@@ -1,6 +1,8 @@
 # Extend the base image for running a devcontainer within vscode.
-ARG DEBIAN_VERSION=bookworm
-FROM mcr.microsoft.com/vscode/devcontainers/base:$DEBIAN_VERSION
+
+# Version = bookworm
+ARG DEBIAN_VERSION=sha256:73d85a96694a2cadca1ba3fcb5721f2312a64f1d571dd86f6c77e10a708931dc
+FROM mcr.microsoft.com/vscode/devcontainers/base@$DEBIAN_VERSION
 
 # Install dependencies (compilers, openmpi, git, etc)
 RUN apt update
