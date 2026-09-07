@@ -32,7 +32,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: fortran-carpentries-exercises
+  IMAGE_NAME: modern-fortran
 
 concurrency:
   # Skip intermediate builds: always.
