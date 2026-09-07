@@ -5,17 +5,34 @@ name: "Build and publish parent docker image for the exercises"
 on:
   # Allow manual execution for testing, hot-fixes, etc
   workflow_dispatch:
-  # Build on pushes to main if relevant files have changed
+    inputs:
+      push_to_registry:
+        description: 'Push the image to the GitHub Container Registry'
+        required: false
+        default: true
+        type: boolean
+  # Build on pushes and PRs to main if relevant files have changed
   push:
     branches:
       - 'main'
     paths:
       - '.github/workflows/docker_build_parent_exercises_image.yaml'
       - '.devcontainer/Dockerfile'
+  pull_request:
+    branches:
+      - 'main'
+    types:
+      - opened
+      - ready_for_review
+      - reopened
+      - synchronize
+    paths:
+      - '.github/workflows/docker_build_parent_exercises_image.yaml'
+      - '.devcontainer/Dockerfile'
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: fortran-carpentries-exercises
 
 concurrency:
   # Skip intermediate builds: always.
@@ -38,11 +55,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
-      - name: Lowercase image name
-        run: |
-          IMAGE_NAME="$(echo "${IMAGE_NAME}" | tr '[:upper:]' '[:lower:]')"
-          echo "IMAGE_NAME=${IMAGE_NAME}" >> "${GITHUB_ENV}"
-
       # Ensure there is enough space for building the large docker image
       - name: Free Disk Space (Ubuntu)
         uses: jlumbroso/free-disk-space@54081f138730dfa15788a46383842cd2f914a1be
@@ -50,7 +62,7 @@ jobs:
           large-packages: false
 
       - name: Build and push to ghcr
-        uses: aleskxyz/build-push@597b92355b8063b229b03ad0c2f7c1bdeb8f9ab4
+        uses: connoraird/build-push@7534f5515ccd15ee932fd925b9f1935efbbb3fdd # v1.0.1
         with:
           dockerfile_path: ./.devcontainer/Dockerfile
           image_name: ${{ env.IMAGE_NAME }}
@@ -58,7 +70,7 @@ jobs:
             latest
             type=ref,event=branch
           context: .
-          push_to_registry: true
+          push_to_registry: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.push_to_registry) }}
           registry_address: ${{ env.REGISTRY }}
           registry_username: ${{ github.actor }}
           registry_password: ${{ github.token }}
