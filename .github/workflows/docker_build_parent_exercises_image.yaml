@@ -32,7 +32,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: modern-fortran
+  IMAGE_NAME: ${{ github.repository_owner }}/modern-fortran
 
 concurrency:
   # Skip intermediate builds: always.
