@@ -11,5 +11,5 @@
 "learners/discuss.md" "b9947e124d206e785f828884493dff40" "site/built/discuss.md" "2026-05-05"
 "learners/reference.md" "83c0730d9ff775dab5ee9bde3f8189b1" "site/built/reference.md" "2026-04-21"
 "learners/setup.md" "a10fd75e1857b1821c02f3b0b52ae0d1" "site/built/setup.md" "2026-04-21"
-"profiles/learner-profiles.md" "73bb792eb734245d45ca4421eae955f0" "site/built/learner-profiles.md" "2026-04-21"
-"renv/profiles/lesson-requirements/renv.lock" "29b0e426f35cbc9aebe281eb3c1ed34a" "site/built/renv.lock" "2026-04-21"
+"profiles/learner-profiles.md" "e7e810655f83a38a23e3fde8e1304ae6" "site/built/learner-profiles.md" "2026-09-28"
+"renv/profiles/lesson-requirements/renv.lock" "8d7dd1dfb4084fa5bee57f2faef20918" "site/built/renv.lock" "2026-09-28"
