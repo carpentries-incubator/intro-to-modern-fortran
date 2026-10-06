@@ -19,7 +19,7 @@
   "Packages": {
     "renv": {
       "Package": "renv",
-      "Version": "1.2.4",
+      "Version": "1.3.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Project Environments",
@@ -48,6 +48,7 @@
         "modules",
         "packrat",
         "pak",
+        "pkgload",
         "R6",
         "remotes",
         "reticulate",
